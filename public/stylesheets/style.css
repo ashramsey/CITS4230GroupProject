@@ -38,8 +38,8 @@ p { padding-bottom: 18px; }
 
 #top { padding: 20px 0 16px; }
 
-#logo { float: left; display: inline; width: 233px; font-size: 0; line-height: 0; }
-#logo a { display: block; height: 67px; text-indent: -4000px; background: url(/images/logo.gif); }
+#logo { float: left; display: inline; width: 400px; font-size: 0; line-height: 0; }
+#logo a { display: block; height: 150px; text-indent: -4000px; background: url(/images/monkeyLogo.png); }
 
 #search { float: right; display: inline; padding-top: 18px; width: 227px; }
 #search .field-holder { float: left; display: inline; width: 196px; background: url(/images/search-field.gif) no-repeat 0 0; padding: 1px; }
