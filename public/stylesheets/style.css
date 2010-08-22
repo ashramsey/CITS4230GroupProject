@@ -96,3 +96,22 @@ h3.txt-247 { background-image: url(/images/txt-247.gif); }
 #footer a { color: #fff; text-decoration: none; }
 #footer a:hover { color: #237087; }
 #footer span { margin: 0 6px; }
+
+
+
+/********************************************************************************
+*                            PAGE SPECIFIC STYLES                               *
+*********************************************************************************/
+
+
+/*---------------------------Support Page Start-----------------------------------*/
+
+/*---------------------------Header Container Start ----------------------------*/
+#slider-holder .slider-support-info { float:left; display:inline; width:712px; padding-top: 0px; }
+#slider-holder .support-image { float: left; display: inline; }
+#slider-holder .support-text  { float:left; width:383px; margin-left:50px; }
+h2.txt-need-help { height: 94px; background-image: url(/images/txt-looking-for-support.png); }
+
+/*---------------------------Header Container End-------------------------------*/
+
+/*---------------------------Support Page End------------------------------------*/
