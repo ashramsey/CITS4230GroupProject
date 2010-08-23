@@ -107,7 +107,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 *                            PAGE SPECIFIC STYLES                               *
 *********************************************************************************/
 #support { background-color:#E6E2D9; }
-#support #page { background: url("../images/background-page.png") repeat-x scroll 0 0 #FFFFFF; -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px; -moz-box-shadow:0 5px 20px rgba(0, 0, 0, 0.75); }
+#support #page { background: url("../imagess/background-page.png") repeat-x scroll 0 0 #FFFFFF; -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px; -moz-box-shadow:0 5px 20px rgba(0, 0, 0, 0.75); }
 #support #navigation { width:910px; height: 38px; background:none; background-color:#3D3E34; padding: 8px 10px 6px; margin-left: -28px; -webkit-box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px; -moz-box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.50); }
 #support #slider { background:none; }
 #support #navigation ul li a:hover, #support #navigation ul li a.active, #support #navigation ul li a:hover span, #support #navigation ul li a.active span { background:none; background-color:#E6E2D9; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
