@@ -34,7 +34,7 @@ p { padding-bottom: 18px; }
 .ac { text-align: center; }
 
 #page { width: 874px; margin: 0 auto; }
-#page { padding: 0 28px; min-height: 100%; height: auto !important; height: 100%; background: url(/images/bg.gif) repeat-y center 0; }
+#page { padding: 0 28px; min-height: 100%; height: auto !important; height: 100%; background:url("/images/bg.gif") repeat-y scroll 0 0 transparent; }
 
 #top { padding: 20px 0 16px; }
 
@@ -72,7 +72,7 @@ p { padding-bottom: 18px; }
 #slider-holder ul { width: 874px; height: 327px; position: relative; overflow: hidden; }
 #slider-holder ul li { list-style-type: none; float: left; display: inline; height: 267px; width: 712px; padding: 56px 108px 4px 54px; position: relative; overflow: hidden; }
 
-#main { border-bottom: solid 1px #e3e7e9; margin-bottom: 6px; }
+#main { float:left; border-bottom: solid 1px #e3e7e9; margin-bottom: 6px; }
 
 h2.txt-we-love-mondays { height: 94px; background-image: url(/images/txt-we-love-mondays.gif); }
 h3.txt-monday-again { background-image: url(/images/txt-monday-again.gif); }
@@ -90,6 +90,10 @@ h3.txt-247 { background-image: url(/images/txt-247.gif); }
 
 .three-cols .col { width: 264px; margin-right: 41px; }
 .two-cols .col { width: 420px; margin-right: 34px; }
+.two-cols { float:left; border-top:1px solid #E3E7E9; }
+.two-thirds-cols { float:left; width: 550px; padding-right: 0px; margin-right: 32px; }
+.two-thirds-cols .col { width:100%; }
+.one-third-cols { float:left; width: 291px; padding-right: 0px; margin-right: 0px; } }
 
 #footer { height: 41px; background: url(/images/footer.gif) no-repeat 0 0; line-height: 41px; padding: 10px 10px 10px 22px; color: #fff; }
 #footer p { padding-bottom: 0; }
@@ -102,8 +106,11 @@ h3.txt-247 { background-image: url(/images/txt-247.gif); }
 /********************************************************************************
 *                            PAGE SPECIFIC STYLES                               *
 *********************************************************************************/
-
-
+#support { background-color:#E6E2D9; }
+#support #page { background: url("/images/background-page.png") repeat-x scroll 0 0 #FFFFFF; -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px; -moz-box-shadow:0 5px 20px rgba(0, 0, 0, 0.75); }
+#support #navigation { width:910px; height: 38px; background:none; background-color:#3D3E34; padding: 8px 10px 6px; margin-left: -28px; -webkit-box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px; -moz-box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.50); }
+#support #slider { background:none; }
+#support #navigation ul li a:hover, #support #navigation ul li a.active, #support #navigation ul li a:hover span, #support #navigation ul li a.active span { background:none; background-color:#E6E2D9; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
 /*---------------------------Support Page Start-----------------------------------*/
 
 /*---------------------------Header Container Start ----------------------------*/
@@ -111,7 +118,37 @@ h3.txt-247 { background-image: url(/images/txt-247.gif); }
 #slider-holder .support-image { float: left; display: inline; }
 #slider-holder .support-text  { float:left; width:383px; margin-left:50px; }
 h2.txt-need-help { height: 94px; background-image: url(/images/txt-looking-for-support.png); }
-
 /*---------------------------Header Container End-------------------------------*/
+/*---------------------------Two-Thirds Container Start ----------------------------*/
+#support .txt-support { list-style:none; background: #eee; margin:0px 0 20px; padding:10px; -webkit-border-radius: 0 0 4px 4px;  -moz-border-radius: 0 0 4px 4px; color: #333; }
+#support .two-thirds-cols h2 { margin:0; padding:5px 10px; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#EEE'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#EEE)); /* for webkit browsers */
+background: -moz-linear-gradient(center top,  #CCC,  #EEE); /* for firefox 3.6+ */
+
+}
+#support .two-thirds-cols h3 { margin-top:10px; }
+#support .two-thirds-cols h3 a { color: #464646; font-family: "Trebuchet MS", Tahoma, Sans-Serif; text-decoration:none; }
+#support .two-thirds-cols h3 a:hover, #support .two-thirds-cols h3.active a { color:#FF5500; }
+#support .two-thirds-cols h3.active { background-position: left bottom;}
+.acc_container { overflow: hidden; }
+
+/*---------------------------Two-Thirds Container End-------------------------------*/
+/*---------------------------One-Third Container Start ----------------------------*/
+#contact-container { background:url("../images/back.png") repeat scroll 0 0 #3D3E34; -webkit-box-shadow: rgba(0, 0, 0, 0.746094) 0px 10px 20px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.75); }
+.contact-content { margin:15px; min-height:370px; display: block; color:#DDDDDD; }
+#contact-container h1 { color:#FF5500; font-family:AppleGothic,CenturyGothic,sans-serif; margin:0; padding:20px 0 10px 30px; text-align:left; background-color:#202217; -webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0px 0px; }
+form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; }
+
+#contact-container label { clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding:right:4px; text-align:right; width:100; margin-top:10px; }
+#contact-container .contact-input { font-family:Futura,AppleGothic,CenturyGothic,sans-serif; background-color:#E8E8E8; color:#DDDDDD; border:1px inset #5F5F5F; font-size:1em; margin:2px; min-height:20px; padding:2px; width:220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+#contact-container .contact-button { background:url("/images/send.png") no-repeat scroll center top transparent; border:0 none; clear:both; color:#FFFFFF; cursor:pointer; font-size:1em; font-weight:bold; height:41px; margin:12px 0 0 0; position:relative; text-align:center; vertical-align:middle; width:110px; }
+#contact-container .contact-button:hover, #contact-container .contact-button:focus { background:url("/images/send.png") no-repeat scroll center -41px transparent; }
+#contact-container .contact-button:active { background:url("/images/send.png") no-repeat scroll center -82px transparent }
+
+/*FIREFOX*/
+#contact-container {}
+/*SAFARI/CHROME*/
+#contact-container { }
+/*---------------------------One-Third Container End-------------------------------*/
 
 /*---------------------------Support Page End------------------------------------*/

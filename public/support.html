@@ -5,10 +5,25 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 <script src="/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script>$(document).ready(function() {
+	//Set default open/close settings
+  $('.acc_container').hide(); //Hide/close all containers
+  $('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
 
+  //On Click
+  $('.acc_trigger').click(function(){
+  	if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
+  		$('.acc_trigger').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
+  		$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
+  	}
+  	return false; //Prevent the browser jump to the link anchor
+  });
+  
+});
+</script>
 
 </head>
-<body>
+<body id="support">
 <div id="page" class="shell">
   <!-- Logo + Search + Navigation -->
   <div id="top">
@@ -47,43 +62,140 @@
               <div class="support-text">
                 <h2 class="notext txt-need-help">Looking for Support?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
-                <a href="#" class="button-more">More</a> </div>
               </div>
-              
           </li>
         </ul>
       </div>
-      <div class="slider-nav"> <a href="#" class="prev">Previous</a> <a href="#" class="next">Next</a> </div>
     </div>
     <!-- END Slider -->
   </div>
   <!-- END Header -->
   <!-- Main -->
   <div id="main">
-    <!-- Three Column Content -->
-    <div class="cols three-cols">
+    <!-- Two-Thirds Column Content -->
+    <div class="cols two-thirds-cols">
       <div class="cl">&nbsp;</div>
       <div class="col">
-        <h2>What is Mondays?</h2>
-        <h3 class="notext txt-monday-again">MONDAY AGAIN</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
-        <p><a href="#" class="more">Learn more</a></p>
+        <p>Select the question you need help with below. Please check through the FAQs carefully as your question may already have been answered. If we haven't provided an answer, you may contact us using the form on the right.</p>
+        <h2>Signing Up and Logging In</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">How do I sign-up?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">How do I sign-up?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">How do I sign-up?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+        </ul>
       </div>
       <div class="col">
-        <h2>Monday Services</h2>
-        <h3 class="notext txt-wedothis">WE DO THIS AND THAT....</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. </p>
-        <p><a href="#" class="more">Learn more</a></p>
+        <h2>Joining a Chat Room</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">What is a chat room?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">What is a chat room?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">What is a chat room?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+        </ul>
       </div>
-      <div class="col col-last">
-        <h2>Monday Support</h2>
-        <h3 class="notext txt-247">24/7 YES REALLY...</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue.</p>
-        <p><a href="#" class="more">Learn more</a></p>
+      <div class="col">
+        <h2>Logging Out</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">Leaving so soon?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">Leaving so soon?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">Leaving so soon?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                  <p><a href="#" class="more">Learn more</a></p>
+                </div>
+              </div>
+          </li>
+        </ul>
       </div>
       <div class="cl">&nbsp;</div>
     </div>
-    <!-- END Three Column Content -->
+    <!-- END Two-Thirds Column Content -->
+    <!-- One-Third Column Content -->
+    <div class="cols one-third-cols">
+      <div id="contact-container">
+        <h1 class="contact-title">Contact Us:</h1>
+        <div class="contact-content">
+        	<form style="" action="#">
+        		<label for="contact-name">*Name:</label>
+        		<input type="text" tabindex="1001" name="name" class="contact-input" id="contact-name">
+        		<label for="contact-email">*Email:</label>
+        		<input type="text" tabindex="1002" name="email" class="contact-input" id="contact-email">
+        		<label for="contact-subject">&nbsp;Subject:</label>
+        		<input type="text" tabindex="1003" value="" name="subject" class="contact-input" id="contact-subject">
+        		<label for="contact-message">*Message:</label>
+        		<textarea tabindex="1004" rows="4" cols="40" name="message" class="contact-input" id="contact-message"></textarea>
+        		<button tabindex="1006" class="contact-send contact-button" type="submit">Send</button>
+        		<button tabindex="1007" class="contact-cancel contact-button simplemodal-close" type="submit">Cancel</button>
+        	</form>
+        </div>
+      </div>
+    </div>
+    <!-- END One-Third Column Content -->
     <!-- Two Column Content -->
     <div class="cols two-cols">
       <div class="cl">&nbsp;</div>
