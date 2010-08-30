@@ -113,6 +113,123 @@ body, #support { background-color:#E6E2D9; }
 #support #slider { background:none;  -webkit-box-shadow: rgba(0, 0, 0, 0.0) 0px 3px 5px 0px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.0); }
 #navigation ul li a:hover, #navigation ul li a.active, #navigation ul li a:hover span, #navigation ul li a.active span { background:none; background-color:#E6E2D9; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
 
+/*************************** HOME PAGE START ************************************/
+#home { background-color:#E6E2D9; }
+
+/*---------------------------One-Third Container Start ----------------------------*/
+#sign-container { background:url("../images/back.png") repeat scroll 0 0 #3D3E34; -webkit-box-shadow: rgba(0, 0, 0, 0.746094) 0px 10px 20px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.75); }
+.sign-content { margin:15px; min-height:250px; display: block; color:#DDDDDD; }
+#sign-container h1 { color:#009933; font-family:AppleGothic,CenturyGothic,sans-serif; margin:0; padding:20px 0 10px 30px; text-align:left; background-color:#202217; -webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0px 0px; }
+form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; }
+
+#sign-container label { clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding:right:4px; text-align:right; width:100; margin-top:10px; }
+#sign-container .user-input { font-family:Futura,AppleGothic,CenturyGothic,sans-serif; background-color:#E8E8E8; color:#DDDDDD; border:1px inset #5F5F5F; font-size:1em; margin:2px; min-height:20px; padding:2px; width:220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+#sign-container .user-button { background:url("../images/send.png") no-repeat scroll center top transparent; border:0 none; clear:both; color:#FFFFFF; cursor:pointer; font-size:1em; font-weight:bold; height:41px; margin:12px 0 0 0; position:relative; text-align:center; vertical-align:middle; width:110px; }
+#sign-container .contact-button:hover, #sign-container .contact-button:focus { background:url("../images/send.png") no-repeat scroll center -41px transparent; }
+#sign-container .contact-button:active { background:url("../images/send.png") no-repeat scroll center -82px transparent }
+
+/*FIREFOX*/
+#sign-container {}
+/*SAFARI/CHROME*/
+#sign-container { }
+/*---------------------------One-Third Container End-------------------------------*/
+
+/*---------------------------Two-Third Container Start-----------------------------*/
+#newImage { margin-left:-50px;}
+.subheading {
+	font-family: "Courier New", Courier, monospace;
+	font-weight:bolder;
+	color:#006600;
+	font-size:large;
+	width:500px;
+}
+.content {
+	font-family: Garamond, serif;
+	color:#808080;	
+	font-size:x-small;
+	line-height:normal;
+	padding:10px;
+}
+
+.list {
+	list-style-image:url('../images/correct.jpg');
+	margin-left:100px;
+}
+
+.list a{
+	text-decoration:none;
+	color:#808080;	
+}
+
+.list a:hover{
+	background-color:#CCFFCC;
+}
+/*---------------------------Two-Third Container End-------------------------------*/
+
+
+
+/*---------------------------------Two cols Start----------------------------------*/
+.two-cols .colTwo { width: 370px; margin-right: 50px; }
+
+.colFrame {
+  	display:block !important;
+  	-moz-border-radius: 10px 10px 10px 10px;
+  	-webkit-border-radius: 10px 10px 10px 10px;
+  	background: none repeat scroll 0 0 #00CC66;
+  	padding:20px;
+  	min-height:250px;
+  	width:335px;
+  	margin-left:10px;
+}
+
+.colFrame h2 {
+	border-bottom:1px #999999 solid;
+	padding-bottom:10px;
+	font-weight:bold;
+	color:#666666;
+}
+
+.colFrame ul {
+	list-style:none outside none;
+	margin:10px -10px 10px 0;
+	padding:0;
+}
+
+.colFrame li {
+	display: inline;
+	float:left;
+	margin:0 8px 0 8px;
+	padding:0;
+	position:relative;
+	width:50px;
+	height:70px;
+}
+
+.colFrame .learnMore {
+	color:blue;
+	font-size:x-small;	
+}
+/*----------------------------------Two cols End-----------------------------------*/
+
+
+/*----------------------------------Slide Image pic-----------------------------------*/
+#slider-holder .slide-imageindex { float: right; display: inline; width:400px; height:400px; margin-top:-270px; margin-right:-100px;}
+#slider-holder .slide-infoindex { float: left; display: inline; width: 424px; padding-top: 23px; font-size:xx-small;}
+#slider-holder .slide-infoindex p { padding-bottom: 8px; }
+/*----------------------------------Slide Image end-----------------------------------*/
+
+
+/*----------------------------------Slide Image text-----------------------------------*/
+h2.slide1Index {height:94px; background-image:url('../images/index-sliding1.gif'); margin-top:-30px;}
+h2.slide2Index {height:120px; background-image:url('../images/index-sliding2.gif'); margin-top:-30px;}
+h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif'); margin-top:-30px;}
+/*----------------------------------Slide Image text end-----------------------------------*/
+
+
+/***************************** HOME PAGE END ************************************/
+
+
+
 /*---------------------------Support Page Start-----------------------------------*/
 
 /*---------------------------Header Container Start ----------------------------*/
