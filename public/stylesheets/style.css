@@ -77,6 +77,7 @@ p { padding-bottom: 18px; }
 h2.slide1 {height:94px; background-image:url('../images/index-sliding1.gif'); margin-top:-30px;}
 h2.slide2 {height:120px; background-image:url('../images/index-sliding2.gif'); margin-top:-30px;}
 h2.slide3 {height:120px; background-image:url('../images/index-sliding3.gif'); margin-top:-30px;}
+h3.txt-monkey-again { background-image: url('../images/txt-monkey-again.gif'); }
 h3.txt-wedothis { background-image: url(../images/txt-wedothis.gif); }
 h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
@@ -447,4 +448,22 @@ float:left;
 }
 
 /*---------------------------Site Map Page End------------------------------------*/
+
+/*---------------------------About Us Page End------------------------------------*/
+#abtus{
+	width: 874px;
+	height: 327px;
+	float: none;
+	background-image: url('../images/about_us_hdr.jpg');
+}
+
+#abtus h2{
+	text-decoration: blink;
+	position: inherit;
+	padding-top: 60px;
+	padding-left: 80px;
+	font-family: "Comic Sans MS";
+	font-size: 50px;
+}
+/*---------------------------About Us Page End------------------------------------*/
 
