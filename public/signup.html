@@ -8,26 +8,33 @@
 <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 <script src="js/jquery-func.js" type="text/javascript"></script>
 </head>
+
 <body>
+
+<!-- START PAGE --!>
 <div id="page" class="shell">
+  
   <!-- Logo + Search + Navigation -->
   <div id="top">
     <div class="cl">&nbsp;</div>
     <img src="images/logo2.png" alt="Logo_small"/>
+
     <!-- Hidden to reduce size of gap -->
     <!--<h1 id="logo"><a href="#">MONDAYS</a></h1> -->
-   
+
+    <!-- START SEARCHBAR --!>
     <form action="#" method="post" id="search">
       <div class="field-holder">
         <input type="text" class="field" value="Search" title="Search" />
       </div>
       <div>
       	<input type="submit" class="button" value="Search" />
-	  </div>
+      </div>
       <div class="cl">&nbsp;</div>
     </form>
+    <!-- END SEARCHBAR --!>  
 
-      
+    <!-- NAVIGATION --!>  
     <div class="cl">&nbsp;</div>
     <div id="navigation">
       <ul>
@@ -40,61 +47,26 @@
     </div>
   </div>
   <!-- END Logo + Search + Navigation -->
-  <!-- Header -->
-  <div id="header">
-    
-    <!-- Slider --> <!--
-      <div id="slider-holder">
-        <ul>
-          <li>
-            <div class="slide-info">
-              <h2 class="notext txt-we-love-mondays">We LOVE MONDAYS</h2>
-              <p>contents at front</p>
-             </div>
-            <div class="slide-image"> <img src="images/img1.gif" alt="" /> </div>
-          </li>
-          <li>
-            <div class="slide-info">
-              <h2 class="notext txt-we-love-mondays">WE LOVE MONDAYS</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit.</p>
-              <a href="#" class="button-more">More</a> </div>
-            <div class="slide-image"> <img src="images/img1.gif" alt="" /> </div>
-          </li>
-          <li>
-            <div class="slide-info">
-              <h2 class="notext txt-we-love-mondays">WE LOVE MONDAYS</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit.</p>
-              <a href="#" class="button-more">More</a> </div>
-            <div class="slide-image"> <img src="images/img1.gif" alt="" /> </div>
-          </li>
-        </ul>
-      </div>
-      <div class="slider-nav"> <a href="#" class="prev">Previous</a> <a href="#" class="next">Next</a> </div>
-    </div> --!>
-    <!-- END Slider -->
-    
-  </div>
-  <!-- END Header -->
-
-  <form action="">
-  <!-- Main -->
-  <div id="main">
+  
+  <!-- START SUPFORM --!>
+  <form action="" id="supform">
     <!-- Three Column Content -->
     <div class="cols three-cols">
       <div class="cl">&nbsp;</div>
       <div class="col">
         <h1>Sign Up</h1><br />
 	<h2>Please fill in all fields</h2>
-     </div>
+      </div>
       <div class="col">
 	<h2>Personal Details</h2>
         <p>
         Username: <input type="text" name="usrn" size="30" /> <br />
 	Email Address: <input type="text" name="eaddress"  /> <br />
-	Password: <input type="text" name="pword" /> <br />
-	Confirm Password: <input type="text" name="cpword" /> <br />
+	Password: <input type="password" name="pword" /> <br />
+	Confirm Password: <input type="password" name="cpword" /> <br />
 	Citizenship: <select id="member_country_id" name="member[country_id]">
-              <option>Please Select</option><option value="1">Afghanistan</option>
+              <option>Please Select</option>
+	      <option value="1">Afghanistan</option>
 	      <option value="2">Åland Islands</option>
 	      <option value="3">Albania</option>
 	      <option value="4">Algeria</option>
@@ -326,7 +298,7 @@
 	      <option value="230">Uzbekistan</option>
 	      <option value="231">Vanuatu</option>
 	      <option value="232">Venezuela</option>
-	      <option value="233">Viet Nam</option>
+	      <option value="233">Vietnam</option>
 	      <option value="234">Virgin Islands, British</option>
 	      <option value="235">Virgin Islands, U.S.</option>
 	      <option value="236">Wallis and Futuna</option>
@@ -336,32 +308,21 @@
 	      <option value="240">Zimbabwe</option>
             </select>
 	</p>
-     </div>
-      <div class="col col-last">
-        <h2>Verification</h2>
-	<img src="images/verify.png" alt="verification image" />
-       <p>Please enter the above characters:
-	<input type="text" name="verify" />
-	</p>
-     </div>
-      <div class="cl">&nbsp;</div>
-    </div>
-    <!-- END Three Column Content -->
-    <!-- Two Column Content -->
-<!--
-    <div class="cols two-cols">
-      <div class="cl">&nbsp;</div>
-      <div class="col">
-        <h2>Tell us about yourself!</h2>
-        <p>
-	<textarea name="about" rows="10" columns="10">Hobbies?
-	Favourite food?
-	</textarea>
-	</p>
-     </div>
---!>
+	  </div>
      
-      <div class="col-last">
+	  <div class="col col-last">
+	    <h2>Verification</h2>
+	    <img src="images/verify.png" alt="verification image" />
+	    <p>Please enter the above characters:
+	    <input type="text" name="verify" />
+	    </p>
+	  </div>
+	  <div class="cl">&nbsp;</div>
+	  </div>
+    <!-- END Three Column Content -->
+
+      <!-- Two Column Content -->
+      <div class="col col-last">
        <p>
 	<h2>Tell us about yourself!</h2>
         <p>
@@ -370,14 +331,11 @@
 	<input type="reset" value="Reset All" />
 	<input type="submit" value="Submit Registration!" />
 	</p>
-     </div>
-      
       <div class="cl">&nbsp;</div>
-    </div>
+      </div>
     <!-- END Two Column Content -->
-  </div>
-  <!-- END Main -->
-  </form>
+ </form>
+ <!-- END SUPFORM --!>
   
   <!-- Footer -->
 <div id="footer" class="">
@@ -406,5 +364,6 @@
   </div>
   <!-- END Footer -->
 </div>
+<!-- END PAGE --!>
 </body>
 </html>

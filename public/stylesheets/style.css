@@ -895,4 +895,10 @@ float:left;
 	font-size: 50px;
 }
 /***************************** ABOUTUS PAGE END ************************************/
->>>>>>> ed4f21f74688a130f1aa761765031af5194fc237
+
+/***************************** SIGNUP PAGE START ************************************/
+#supform { display:inline-block; float: none; border-top: solid 1px #e3e7e9; margin:20px; padding:20px; }
+
+
+
+/***************************** SIGNUP PAGE END ************************************/
