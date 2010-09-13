@@ -1,14 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Mondays</title>
+<title>Monkey Talk</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
 <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 <script src="js/jquery-func.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	/* ------------- Sign-In JS Start ------------------------*/
+		// for sign-in box, to show visibility when click.
+		function visibility(elemId){
+			var frm = document.getElementById(elemId);
+			if (frm.style.display == 'none'){
+				frm.style.display = 'block';
+		}
+		else {
+			frm.style.display = 'none';
+		}
+		}
+	/*------------- Sign-In JS End ---------------------------*/
+	
+	
+	/*------------- Top Room List Start  ---------------------------*/
+	numOfChatRooms = 5;
+	// Auto generated chatRoom
+	function chatRoomGen (){
+		var now = new Date();
+		var sec = now.getSeconds();
+		var rand1 = Math.random(sec); // to generate it everytime with different time.
+		var randUse = Math.floor(rand1 * (numOfChatRooms));
+		if(randUse == numOfChatRooms) randUse = 0; // to avoid getting more than array specified
+		return randUse;
+	}
+	
+	function chatRoomDisplay(){
+		var num = chatRoomGen();
+		newid = "chatRoomsList"+num;
+		document.getElementById(newid).style.display = "block";		
+	}
+	/*------------- Top Room List End  ---------------------------*/
+	
+	/*------------- Validating Start  ----------------------------*/
+	
+	function validate() {
+		var name = document.getElementById("user-name");
+		var pass = document.getElementById("user-pass");
+		
+		if (name.value == "" && pass.value == ""){
+			alert("Please provide both username and password.");
+			name.focus();
+			name.select();
+			return false;
+		}
+		else if(name.value == ""){
+			alert("Please provide your user name.");
+			name.focus();
+			name.select();
+			return false;
+		}
+		else if (pass.value == ""){
+			alert("Please provide your password.");
+			pass.focus();
+			pass.select();
+			return false;
+		}
+		return true;
+	}
+	
+	function cancel(){
+		var name = document.getElementById("user-name");
+		var pass = document.getElementById("user-pass");
+
+		name.value = "";
+		pass.value = "";		
+	}
+	
+	/*------------- Validating End  ------------------------------*/
+
+-->
+</script>
 </head>
-<body>
+<body onload="chatRoomDisplay();">
 <div id="page" class="shell">
   <!-- Logo + Search + Navigation -->
   <div id="top">
@@ -23,19 +97,39 @@
     	}
     -->
     </script>
-    <form onsubmit="getsearch()" method="get" id="search">
-      <div class="field-holder">
-        <input type="text" class="field" id="searchtxt" value="Search" title="Search" />
-      </div>
-      <div>
-      	<input type="submit" class="button" value="Search" />
+    <form onsubmit="getsearch()" method="get" id="searchIndex">
+	      
+	  <div class="sign-up">
+	  	<a href="signUp.html">Sign Up</a>
+	  </div>    
+	  <div class="sign-in">
+	  	<a href="javascript:visibility('signInForm');">Sign In</a>
 	  </div>
+      <div>
+      	<input type="submit" class="button button-Index" value="Search" />
+	  </div>
+      <div class="field-holder-Index">
+        <input type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
+      </div>
+      
       <div class="cl">&nbsp;</div>
     </form>
-    <div class="cl">&nbsp;</div>
+    
+    <form id="signInForm" method="get" class="sign-In-Form"  onsubmit="validate()">
+        		<div><label for="user-name">*User Name:</label></div>
+        		<div><input type="text" tabindex="1001" name="name" class="user-input" id="user-name"/></div>
+        		<div><label for="user-pass">*Password:</label></div>
+        		<div><input type="text" tabindex="1002" name="pass" class="user-input" id="user-pass"/></div>
+        		<div>
+        			<button tabindex="1006" class="user-send user-button" type="submit" >Send</button>
+        			<button tabindex="1007" class="user-cancel user-button simplemodal-close" type="reset" onclick="visibility('signInForm');">Cancel</button>
+        		</div>
+        		<div><br/><a href="www.google.com">Forgot Your Password??</a></div>
+    </form>    
+    <div class="cl">&nbsp;</div>	
     <div id="navigation">
       <ul>
-        <li><a href="index.html" class="active"><span>Home</span></a></li>
+        <li><a href="indexBfr.html" class="active"><span>Home</span></a></li>
         <li><a href="login.html"><span>Log In</span></a></li>
         <li><a href="tour.html"><span>Tour</span></a></li>
         <li><a href="support.html"><span>Support</span></a></li>
@@ -96,49 +190,12 @@
   <!-- END Header -->
   <!-- Main -->
   <div id="main">
-    <!-- Three Column Content -->
-    <div class="cols two-thirds-cols">
-      <div class="cl">&nbsp;</div>
-      <div class="col">
-		<img src="images/newgreen1.gif" alt="New Image" />
-		<br/><br/>       
-		<h2 class="subheading"> What's NEWS ??? </h2>
-        <ul class="content list">
-			<li> Create your own chatroom and Invite friends </li>
-			<li> Share your file, video, audio, and picture in your chatroom </li>
-			<li> Fascinating topics, discussion, or gossips </li>
-			<li> Practice to avoid culture shock since today </li>
-			<li> Meet range of people from different country, and different culture </li>
-        </ul>
-        <br/> <br/>
-        <h2 class="subheading"> All of this for FREEE ... </h2>
-      </div>
-      <div class="cl">&nbsp;</div>
-    </div>
-    <div class="cols one-third-cols">
-    	<div id="sign-container">
-        <h1 class="sign-title">Sign In:</h1>
-        <div class="sign-content">
-        	<form style="" action="#">
-        		<label for="user-name">*User Name:</label>
-        		<input type="text" tabindex="1001" name="name" class="user-input" id="user-name"/>
-        		<label for="user-pass">*Password:</label>
-        		<input type="text" tabindex="1002" name="pass" class="user-input" id="user-pass"/>
-        		<button tabindex="1006" class="user-send user-button" type="submit">Send</button>
-        		<button tabindex="1007" class="user-cancel user-button simplemodal-close" type="submit">Cancel</button>
-        		<br/><br/><a href="www.google.com">Forgot Your Password??</a>
-        		<br/><br/><a href="signup.html"> Join Now !! </a>
-        	</form>
-         </div>
-      </div>
-    </div>
-    <!-- END Three Column Content -->
-    <!-- Two Column Content -->
-    <div class="cols two-cols">
+  <!-- Two Column Content -->
+    <div class="cols two-cols-Index">
       <div class="cl">&nbsp;</div>
       <div class="col">
       	<div class="colFrame list">
-        	<h2><a href="www.google.com">See Who's here</a></h2>
+        	<h2 class="headText"><a href="www.google.com">Monkey Talk's Members</a></h2>
        		<ul>
        			<li><img src="images/member/6a00d09e63602bbe2b00d41429b992685e-50si.jpg" alt="teen1"/></li>
        			<li><img src="images/member/teen2.jpg" alt="teen2"/></li>
@@ -159,26 +216,138 @@
        </div>
      </div>
       <div class="col col-last">
-        <h2 class="subheading">Join Us Now in Just 3 Simple Steps:</h2>
-		<ol class="content list">
-			<li> Connect to Internet <img src="images/netConn.png" alt="net" style="width:50px; height:50px;"/></li> 
-			<li><a href="signup.html"> Sign Up </a></li>
-			<li><a href="www.monkeyTalk.com"> Start Your Journey in Monkey Talk </a></li>
-		</ol>       
+      
+        <h2 class="headText headTextAdd" >Top Chatroom:</h2>
+       	
+       	<div id="chatRoomsList0"  class="chatRoomsList0" style="display:none;">
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/Sun.jpg" alt="Good Morning Room"/>
+				<h2 class="roomTitle"> Good Morning Monkey Talk </h2>
+				<p> 105 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/179-1-50.jpg" alt="Speed English"/>
+				<h2 class="roomTitle"> Speeding Ur English Now </h2>
+				<p> 18 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/cam.jpg" alt="English Movie"/>
+				<h2 class="roomTitle"> English Movie Chat Room </h2>
+				<p> 200 People</p>
+			</div>
+		</div>	
+		
+		<div id="chatRoomsList1"  class="chatRoomsList1" style="display:none;">
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/images.jpg" alt="Smile"/>
+				<h2 class="roomTitle"> Smile and Talk English </h2>
+				<p> 80 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/game.png" alt="Game"/>
+				<h2 class="roomTitle"> Hobby Chat Room </h2>
+				<p> 35 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/monkey.gif" alt="Monkey"/>
+				<h2 class="roomTitle"> Monkey Talk Favourite ChatRoom </h2>
+				<p> 250 People</p>
+
+			</div>
+		</div>  
+		
+		<div id="chatRoomsList2"  class="chatRoomsList2" style="display:none;">
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/music.png" alt="Music"/>
+				<h2 class="roomTitle"> English Music Chat Room </h2>
+				<p> 89 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/nevergiveup.jpg" alt="Never Give Up"/>
+				<h2 class="roomTitle"> Never Give Up </h2>
+				<p> 125 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/panda.png" alt="Panda"/>
+				<h2 class="roomTitle"> Random Chat Room </h2>
+				<p> 25 People</p>
+			</div>
+		</div>   
+		
+		<div id="chatRoomsList3"  class="chatRoomsList3" style="display:none;">
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/people.jpg" alt="Diversity"/>
+				<h2 class="roomTitle"> Diversity Chat Room </h2>
+				<p> 75 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/question.png" alt="Question"/>
+				<h2 class="roomTitle"> Help  </h2>
+				<p> 5 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/world.jpg" alt="World"/>
+				<h2 class="roomTitle"> World Chat  </h2>
+				<p> 350 People</p>
+			</div>
+		</div>  
+		
+		<div id="chatRoomsList4"  class="chatRoomsList4" style="display:none;">
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/thumb up.jpg" alt="ThumbsUp"/>
+				<h2 class="roomTitle"> Successfull Learners </h2>
+				<p> 180 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/video1.gif" alt="Video"/>
+				<h2 class="roomTitle"> Random Activities Chat Room </h2>
+				<p> 34 People</p>
+			</div>
+			<div class="chatRoom">
+				<img  class="chatRoom" src="images/ChatRoomListPic/people1.jpg" alt="All"/>
+				<h2 class="roomTitle"> Hey All Members</h2>
+				<p> 220 People</p>
+			</div>
+		</div>
+		
+      </div>
+      <div class="cl">&nbsp;</div>
+      &nbsp;
+    </div>
+    <!-- END Two Column Content -->
+    <!-- Three Column Content -->
+    <!--
+    <div class="cols two-thirds-cols">
+      <div class="cl">&nbsp;</div>
+      <div class="col">
+		<img src="images/newgreen1.gif" alt="New Image" />
+		<br/><br/>       
+		<h2 class="subheading"> What's NEWS ??? </h2>
+        <ul class="content list">
+			<li> Create your own chatroom and Invite friends </li>
+			<li> Share your file, video, audio, and picture in your chatroom </li>
+			<li> Fascinating topics, discussion, or gossips </li>
+			<li> Practice to avoid culture shock since today </li>
+			<li> Meet range of people from different country, and different culture </li>
+        </ul>
+        <br/> <br/>
+        <h2 class="subheading"> All of this for FREEE ... </h2>
       </div>
       <div class="cl">&nbsp;</div>
     </div>
-    <!-- END Two Column Content -->
+    <div class="cols one-third-cols-Index">
+    </div>-->
+    <!-- END Three Column Content -->
+    
   </div>
   <!-- END Main -->
   <!-- Footer -->
   <div id="footer">
     <p class="right">&copy; 2010 - CompanyName &nbsp; Design by who</p>
-    <p><a href="index.html">Home</a><span>&nbsp;</span><a href="sitemap.html">Site Map</a><span>&nbsp;</span></p>
+    <p><a href="indexBfr.html">Home</a><span>&nbsp;</span><a href="sitemap.html">Site Map</a><span>&nbsp;</span></p>
     <div class="cl">&nbsp;</div>
   </div>
   <!-- END Footer -->
-  <br />
 </div>
 </body>
 </html>

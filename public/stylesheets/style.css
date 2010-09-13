@@ -94,7 +94,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 .two-cols { float:left; border-top:1px solid #E3E7E9; }
 .two-thirds-cols { float:left; width: 550px; padding-right: 0px; margin-right: 32px; }
 .two-thirds-cols .col { width:100%; }
-.one-third-cols { float:left; width: 291px; padding-right: 0px; margin-right: 0px; } }
+.one-third-cols { float:left; width: 291px; padding-right: 0px; margin-right: 0px; }
 
 #footer { height: 41px; background: url(../images/footer.gif) no-repeat 0 0; line-height: 41px; padding: 10px 10px 10px 22px; color: #fff; }
 #footer p { padding-bottom: 0; }
@@ -117,21 +117,17 @@ body, #support { background-color:#E6E2D9; }
 #home { background-color:#E6E2D9; }
 
 /*---------------------------One-Third Container Start ----------------------------*/
-#sign-container { background:url("../images/back.png") repeat scroll 0 0 #3D3E34; -webkit-box-shadow: rgba(0, 0, 0, 0.746094) 0px 10px 20px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.75); }
-.sign-content { margin:15px; min-height:250px; display: block; color:#DDDDDD; }
-#sign-container h1 { color:#009933; font-family:AppleGothic,CenturyGothic,sans-serif; margin:0; padding:20px 0 10px 30px; text-align:left; background-color:#202217; -webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0px 0px; }
-form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; }
+.oneThird{
+	margin-left:40px;
+	width:350px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight:bolder;
+	color:#006600;
+	font-size:medium;
+	margin-top:60px;
+}
+.one-third-cols-Index { border-left:1px solid #E3E7E9; float:left; width: 291px; padding: 0px; margin: 0px; }
 
-#sign-container label { clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding:right:4px; text-align:right; width:100; margin-top:10px; }
-#sign-container .user-input { font-family:Futura,AppleGothic,CenturyGothic,sans-serif; background-color:#E8E8E8; color:#DDDDDD; border:1px inset #5F5F5F; font-size:1em; margin:2px; min-height:20px; padding:2px; width:220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
-#sign-container .user-button { background:url("../images/send.png") no-repeat scroll center top transparent; border:0 none; clear:both; color:#FFFFFF; cursor:pointer; font-size:1em; font-weight:bold; height:41px; margin:12px 0 0 0; position:relative; text-align:center; vertical-align:middle; width:110px; }
-#sign-container .contact-button:hover, #sign-container .contact-button:focus { background:url("../images/send.png") no-repeat scroll center -41px transparent; }
-#sign-container .contact-button:active { background:url("../images/send.png") no-repeat scroll center -82px transparent }
-
-/*FIREFOX*/
-#sign-container {}
-/*SAFARI/CHROME*/
-#sign-container { }
 /*---------------------------One-Third Container End-------------------------------*/
 
 /*---------------------------Two-Third Container Start-----------------------------*/
@@ -143,6 +139,10 @@ form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; 
 	font-size:large;
 	width:500px;
 }
+.two-cols-Index .col { width: 430px; }
+.two-cols-Index { float:left; height: 305px; }
+.two-thirds-cols-Index { float:left; width: 450px; padding-right: 0px; margin-right: 32px; }
+
 .content {
 	font-family: Garamond, serif;
 	color:#808080;	
@@ -154,7 +154,7 @@ form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; 
 .list {
 	list-style-image:url('../images/correct.jpg');
 	margin-left:100px;
-}
+}		
 
 .list a{
 	text-decoration:none;
@@ -165,8 +165,6 @@ form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; 
 	background-color:#CCFFCC;
 }
 /*---------------------------Two-Third Container End-------------------------------*/
-
-
 
 /*---------------------------------Two cols Start----------------------------------*/
 .two-cols .colTwo { width: 370px; margin-right: 50px; }
@@ -179,14 +177,21 @@ form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; 
   	padding:20px;
   	min-height:250px;
   	width:335px;
-  	margin-left:10px;
+  	margin-left:2px;
+  
 }
 
-.colFrame h2 {
+.headText {
 	border-bottom:1px #999999 solid;
 	padding-bottom:10px;
 	font-weight:bold;
 	color:#666666;
+}
+.headTextAdd{
+	padding-top:15px;
+	font-weight:bolder;
+	font-size:22px;
+	width:450px;
 }
 
 .colFrame ul {
@@ -209,6 +214,37 @@ form { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:15px; 
 	color:blue;
 	font-size:x-small;	
 }
+
+.chatRoomsList0, .chatRoomsList1, .chatRoomsList2, 
+.chatRoomsList3, .chatRoomsList4 {
+	font-family: Garamond, serif;
+	color:#808080;	
+	font-size:x-small;
+	max-height:240px;	
+	width:440px;
+	float:left;
+}
+
+.chatRoom{
+	border-bottom:1px #C0C0C0 solid;
+	height:75px;
+	padding:5px;
+	width:450px;
+}
+
+img.chatRoom{
+	float:left;
+	width:60px;
+	height:60px;
+	vertical-align:middle;
+	margin-right:10px;
+	border:none;
+}
+
+h2.roomTitle{
+	margin-top:10px;
+}
+
 /*----------------------------------Two cols End-----------------------------------*/
 
 
@@ -224,6 +260,75 @@ h2.slide1Index {height:94px; background-image:url('../images/index-sliding1.gif'
 h2.slide2Index {height:120px; background-image:url('../images/index-sliding2.gif'); margin-top:-30px;}
 h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif'); margin-top:-30px;}
 /*----------------------------------Slide Image text end-----------------------------------*/
+
+/*----------------------------------Search Index Adding -----------------------------------*/
+#searchIndex { float: right; display: inline; padding-top: 18px; width: 400px; }
+#searchIndex .field-Index { width: 186px; border: 0 none; background: none repeat Scrollbar 0 0  transparent; color: #969696;}
+#searchIndex .field-holder-Index {
+	float:right;
+	width: 196px; background: url(../images/search-field.gif) no-repeat 0 0; padding: 1px;
+}
+#searchIndex .button-Index {
+	float:right;
+	width: 25px; height: 25px; font-size: 0; line-height: 0; text-indent: -4000px;
+}
+#searchIndex .button-Index { background: url(../images/search-button.gif) no-repeat 0 0; border: 0; }
+#searchIndex .sign-in { 
+ 	padding:5px;
+ 	float:left;
+ 	padding-right: 20px;
+}
+#searchIndex .sign-up {
+ 	float:left;
+ 	padding:5px;
+ 	padding-right:20px;
+}
+#searchIndex a{
+	color :#666666;
+	font-size:14px;
+	font-family: "Georgia", Tahoma, Sans-Serif;
+	text-decoration:none;
+	font-weight:bold;
+	-webkit-border-radius: 5px;  -moz-border-radius: 5px 5px 5px 5px;
+}
+#searchIndex a:hover{
+	background-color:#00FF00;
+	padding: 5px;
+}
+.sign-In-Form{
+	display:none;
+	border:5px #00FF00 solid;
+	position:absolute;
+	top:61px;
+	right:404px;
+	float:right;
+	width:230px;
+	padding:10px;
+	z-index:100;
+	background-color:#006600;
+	-webkit-border-radius: 5px;  -moz-border-radius: 5px 5px 5px 5px;
+}
+.sign-In-Form label { color :#FFFFFF; clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding:right:4px; text-align:right; width:100; margin-top:10px; }
+.sign-In-Form .user-input { font-family: "Georgia", Tahoma, Sans-Serif; background-color:#E8E8E8; color:#333333; border:1px inset #5F5F5F; font-size:1em; margin:2px; min-height:20px; padding:2px; width:220px; }
+.sign-In-Form .user-button { background:url("../images/send.png") no-repeat scroll center top transparent; border:0 none; clear:both; color:#FFFFFF; cursor:pointer; font-size:1em; font-weight:bold; height:41px; margin:12px 0 0 0; position:relative; text-align:center; vertical-align:middle; width:110px; }
+.sign-In-Form .contact-button:hover, #sign-container .contact-button:focus { background:url("../images/send.png") no-repeat scroll center -41px transparent; }
+.sign-In-Form .contact-button:active { background:url("../images/send.png") no-repeat scroll center -82px transparent }
+.sign-In-Form a{
+	color :#FFFFFF;
+	font-size:14px;
+	font-family: "Georgia", Tahoma, Sans-Serif;
+	text-decoration:none;
+	font-weight:bold;
+}
+.sign-In-Form a:hover{
+	padding: 5px;
+	text-decoration:underline;
+}
+ 
+
+/*----------------------------------Search Index End---------------------------------------*/
+
+
 
 
 /***************************** HOME PAGE END ************************************/
