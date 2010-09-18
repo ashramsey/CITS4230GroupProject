@@ -7,6 +7,19 @@
 <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
 <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 <script src="js/jquery-func.js" type="text/javascript"></script>
+
+<!-- function for other residency --!>
+<script type="text/javascript" >
+function showOtherRes() {
+var memid=document.getElementById("member_country_id");
+if (memid.options[memid.selectedIndex].text=="--Other--"){
+document.getElementById("otherres").style.display="block";
+}
+else {
+document.getElementById("otherres").style.display="none";
+}
+}
+</script>
 </head>
 
 <body>
@@ -49,23 +62,35 @@
   <!-- END Logo + Search + Navigation -->
   
   <!-- START SUPFORM --!>
-  <form action="" id="supform">
+  <form action="" id="main">
     <!-- Three Column Content -->
-    <div class="cols three-cols">
-      <div class="cl">&nbsp;</div>
-      <div class="col">
+     <div class="top">
         <h1>Sign Up</h1><br />
 	<h2>Please fill in all fields</h2>
       </div>
-      <div class="col">
+      <div class="main-col">
 	<h2>Personal Details</h2>
-        <p>
-        Username: <input type="text" name="usrn" size="30" /> <br />
-	Email Address: <input type="text" name="eaddress"  /> <br />
-	Password: <input type="password" name="pword" /> <br />
-	Confirm Password: <input type="password" name="cpword" /> <br />
-	Citizenship: <select id="member_country_id" name="member[country_id]">
+        <div class="userin">
+	<label for="usrn">Username:</label><br />
+	<input type="text" name="usrn" size="25" />
+	</div>
+	<div class="userin">
+	<label for="eaddress">Email Address:</label><br />
+	<input type="text" name="eaddress" size="25"  />
+	</div>
+	<div class="userin">
+	<label for="pword">Password:</label><br />
+	<input type="password" name="pword" size="25" />
+	</div>
+	<div class="userin">
+	<label for="cpword">Confirm Password:</label><br />
+	<input type="password" name="cpword" size="25" />
+	</div>
+	<div class="userin">
+	<label for="memb">Citizenship:</label><br />
+	<select id="member_country_id" name="memb" onchange="showOtherRes();">
               <option>Please Select</option>
+	      <option value="0">--Other--</option>
 	      <option value="1">Afghanistan</option>
 	      <option value="2">Åland Islands</option>
 	      <option value="3">Albania</option>
@@ -307,33 +332,35 @@
 	      <option value="239">Zambia</option>
 	      <option value="240">Zimbabwe</option>
             </select>
-	</p>
-	  </div>
-     
-	  <div class="col col-last">
-	    <h2>Verification</h2>
-	    <img src="images/verify.png" alt="verification image" />
-	    <p>Please enter the above characters:
-	    <input type="text" name="verify" />
+	    </div><br />
+	    <p id="otherres">
+	    <label for="res">Please Specify:</label>
+	    <input type="text" name="res" />
 	    </p>
-	  </div>
+	    </div>
 	  <div class="cl">&nbsp;</div>
-	  </div>
     <!-- END Three Column Content -->
 
       <!-- Two Column Content -->
-      <div class="col col-last">
+      <div class="main-col">
        <p>
 	<h2>Tell us about yourself!</h2>
         <p>
 	<textarea name="about" rows="10" cols="60">Hobbies? Favourite food? Telling others a little about yourself may help you find friends and give you more to talk about!
 	</textarea> <br />
-	<input type="reset" value="Reset All" />
-	<input type="submit" value="Submit Registration!" />
 	</p>
-      <div class="cl">&nbsp;</div>
       </div>
+      <div class="cl">&nbsp;</div>
     <!-- END Two Column Content -->
+      <div class="main-col">
+	<h2>Verification</h2>
+	<img src="images/verify.png" alt="verification image" />
+	<p>Please enter the above characters:
+	<input type="text" name="verify" /> <br />
+	<input class="userin" type="reset" value="Reset All" />
+	<input class="userin" type="submit" value="Submit Registration!" />
+	</p>
+      </div>
  </form>
  <!-- END SUPFORM --!>
   

@@ -897,8 +897,8 @@ float:left;
 /***************************** ABOUTUS PAGE END ************************************/
 
 /***************************** SIGNUP PAGE START ************************************/
-#supform { display:inline-block; float: none; border-top: solid 1px #e3e7e9; margin:20px; padding:20px; }
-
-
-
+#otherres { display: none }
+.main-col {  width: 350px; float:right; margin-left: 200px  }
+.top {float: left}
+.userin { margin-top: 20px}
 /***************************** SIGNUP PAGE END ************************************/
