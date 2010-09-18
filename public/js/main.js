@@ -83,4 +83,16 @@ $(document).ready(function() {
 /* -------------------------------------------- END - Support Page - Topics Slider -------------------------*/
 
 
+/* -------------------------------------------- START - Signup Page ---------------------------------------*/
 
+function showOtherRes() {
+var memid=document.getElementById("member_country_id");
+if (memid.options[memid.selectedIndex].text=="--Other--"){
+document.getElementById("otherres").style.display="block";
+}
+else {
+document.getElementById("otherres").style.display="none";
+}
+}
+
+/* -------------------------------------------- END - Signup Page ---------------------------------------*/
