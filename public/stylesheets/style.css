@@ -98,14 +98,6 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 .two-cols { float:left; border-top:1px solid #E3E7E9; }
 .two-thirds-cols { float:left; width: 560px; padding: 0px; margin: 0px; }
 .two-thirds-cols .col { width:100%; }
-<<<<<<< HEAD
-.one-third-cols { float:left; width: 291px; padding-right: 0px; margin-right: 0px; }
-
-#footer { height: 41px; background: url(../images/footer.gif) no-repeat 0 0; line-height: 41px; padding: 10px 10px 10px 22px; color: #fff; }
-#footer p { padding-bottom: 0; }
-#footer a { color: #fff; text-decoration: none; }
-#footer a:hover { color: #237087; }
-=======
 .one-third-cols { float:left; width:320px; padding:0px; margin:0 0 0 40px; }
 
 #footer { width:1000px; height: 31px; line-height:31px; background:none repeat scroll 0 0 #3D3E34; color: #DDD; padding:0px; }
@@ -117,7 +109,6 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 #footer-right { width:240px; float:right; text-align:center; }
 #footer-center { width:520px; text-align:center; }
 #footer-left { width:240px; float:left; }
->>>>>>> ed4f21f74688a130f1aa761765031af5194fc237
 #footer span { margin: 0 6px; }
 
 /********************************************************************************
@@ -141,8 +132,6 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 /*************************** HOME PAGE START ************************************/
 #home { background-color:#E6E2D9; }
-
-<<<<<<< HEAD
 /*---------------------------One-Third Container Start ----------------------------*/
 .oneThird{
 	margin-left:40px;
@@ -582,7 +571,7 @@ float:left;
 
 /*---------------------------Site Map Page End------------------------------------*/
 
-=======
+
 /*---------------------------One-Third Container Start ----------------------------*/
 .sign-content { margin:20px; min-height:250px; display: block; color:#DDDDDD; }
 
@@ -674,9 +663,9 @@ float:left;
 
 
 /*----------------------------------Slide Image text-----------------------------------*/
-h2.slide1Index {height:94px; background-image:url('../images/index-sliding1.gif'); margin-top:-30px;}
-h2.slide2Index {height:120px; background-image:url('../images/index-sliding2.gif'); margin-top:-30px;}
-h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif'); margin-top:-30px;}
+h2.slide1Index {height:94px; background-image:url('../images/index-sliding1.png'); margin-top:-30px;}
+h2.slide2Index {height:120px; background-image:url('../images/index-sliding2.png'); margin-top:-30px;}
+h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.png'); margin-top:-30px;}
 /*----------------------------------Slide Image text end-----------------------------------*/
 /***************************** HOME PAGE END ************************************/
 

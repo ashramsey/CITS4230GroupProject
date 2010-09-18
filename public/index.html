@@ -9,20 +9,8 @@
 <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 <script src="js/jquery-func.js" type="text/javascript"></script>
 <script src="js/signinDropdown.js" type="text/javascript"></script>
+
 <script type="text/javascript">
-<!--
-	/* ------------- Sign-In JS Start ------------------------*/
-		// for sign-in box, to show visibility when click.
-		function visibility(elemId){
-			var frm = document.getElementById(elemId);
-			if (frm.style.display == 'none'){
-				frm.style.display = 'block';
-		  }
-		  else {
-			  frm.style.display = 'none';
-		  }
-		}
-	/*------------- Sign-In JS End ---------------------------*/
 	
 	
 	/*------------- Top Room List Start  ---------------------------*/
@@ -44,44 +32,9 @@
 	}
 	/*------------- Top Room List End  ---------------------------*/
 	
-	/*------------- Validating Start  ----------------------------*/
-	
-	function validate() {
-		var name = document.getElementById("user-name");
-		var pass = document.getElementById("user-pass");
-		
-		if (name.value == "" &amp;&amp; pass.value == ""){
-			alert("Please provide both username and password.");
-			name.focus();
-			name.select();
-			return false;
-		}
-		else if(name.value == ""){
-			alert("Please provide your user name.");
-			name.focus();
-			name.select();
-			return false;
-		}
-		else if (pass.value == ""){
-			alert("Please provide your password.");
-			pass.focus();
-			pass.select();
-			return false;
-		}
-		return true;
-	}
-	
-	function cancel(){
-		var name = document.getElementById("user-name");
-		var pass = document.getElementById("user-pass");
 
-		name.value = "";
-		pass.value = "";		
-	}
-	
-	/*------------- Validating End  ------------------------------*/
 
--->
+
 </script>
 </head>
 <body onload="chatRoomDisplay();">
@@ -101,9 +54,9 @@
     </script>
     <div id="topnav_container">
       <div id="topnav" class="topnav">
-    	  <a href="signUp.html"class="topnav_links" id="signup"><span>Sign Up</span></a>
+    	  <a href="signUp.html"class="topnav_links"><span>Sign Up</span></a>
     	  
-        <a href="login" class="topnav_links" id="signin"><span>Sign In</span></a> 
+        <a href="login" class="topnav_links signin"><span>Sign In</span></a> 
       </div>
       <form onsubmit="getsearch()" method="get" id="searchIndex" action="">
 
@@ -118,7 +71,7 @@
         <div class="cl">&nbsp;</div>
       </form>
       <fieldset id="signin_menu">
-        <form method="post" id="signin" action="https://twitter.com/sessions">
+        <form method="post" id="signin"  action="">
           <label for="username">Username or email</label>
           <input tabindex="1000" id="username" name="username" value="" title="username" tabindex="4" type="text">
           </p>
