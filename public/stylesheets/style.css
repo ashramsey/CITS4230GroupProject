@@ -40,7 +40,7 @@ p { padding-bottom: 18px; }
 #top { padding: 20px 0; }
 
 #logo { float: left; display: inline; width: 420px; font-size: 0; line-height: 0; padding:0 20px; }
-#logo a { display: block; height: 155px; text-indent: -4000px; background: url(../images/monkeyLogo3.png) no-repeat 0 0; }
+#logo a { display: block; height: 155px; text-indent: -4000px; background: url(../images/monkeyLogo.png) no-repeat 0 0; }
 
 #search { float: right; display: inline; padding:0 20px; width: 227px; }
 #search .field-holder { float: left; display: inline; width: 196px; background: url(../images/search-field.gif) no-repeat 0 0; padding: 1px; }
@@ -289,7 +289,7 @@ h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif
 /*----------------------------------Slide Image text end-----------------------------------*/
 
 /*----------------------------------Search Index Adding -----------------------------------*/
-#searchIndex { float: right; display: inline; padding-top: 18px; width: 400px; }
+#searchIndex { float: right; display: inline-block; padding-top: 0; width: 230px; }
 #searchIndex .field-Index { width: 186px; border: 0 none; background: none repeat Scrollbar 0 0  transparent; color: #969696;}
 #searchIndex .field-holder-Index {
 	float:right;
@@ -310,7 +310,7 @@ h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif
  	padding:5px;
  	padding-right:20px;
 }
-#searchIndex a{
+#searchIndex a, #searchIndex a:hover, #searchIndex .sign-in > input{
 	color :#666666;
 	font-size:14px;
 	font-family: "Georgia", Tahoma, Sans-Serif;
@@ -318,9 +318,11 @@ h2.slide3Index {height:120px; background-image:url('../images/index-sliding3.gif
 	font-weight:bold;
 	-webkit-border-radius: 5px;  -moz-border-radius: 5px 5px 5px 5px;
 }
+
+
+
 #searchIndex a:hover{
 	background-color:#00FF00;
-	padding: 5px;
 }
 .sign-In-Form{
 	display:none;
