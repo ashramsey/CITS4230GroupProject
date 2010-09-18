@@ -1,26 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Support</title>
+<title>Monkey Talk | Support</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
-<script type="text/javascript">$(document).ready(function() {
-	//Set default open/close settings
-  $('.acc_container').hide(); //Hide/close all containers
-  $('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
+<script src="js/main.js" type="text/javascript"></script>
 
-  //On Click
-  $('.acc_trigger').click(function(){
-  	if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
-  		$('.acc_trigger').removeClass('active').next().slideUp(); //Remove all "active" state and slide up the immediate next container
-  		$(this).toggleClass('active').next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
-  	}
-  	return false; //Prevent the browser jump to the link anchor
-  });
-  
-});
-</script>
 
 </head>
 <body id="support">
@@ -28,16 +14,7 @@
   <!-- Logo + Search + Navigation -->
   <div id="top">
     <div class="cl">&nbsp;</div>
-    <h1 id="logo"><a href="#">MONDAYS</a></h1>
-    <script type="text/javascript">	
-    <!--
-    	function getsearch()
-    	{
-    		var srtxt = document.getElementById("searchtxt").value;
-    		window.open("http://www.google.com/search?forid=1&ie=utf-8&oe=UTF-8&hl=EN&q="+srtxt);
-    	}
-    -->
-    </script>
+    <h1 id="logo"><a href="index.html">Monkey Talk - Home</a></h1>
     <form onsubmit="getsearch()" method="get" id="search" action="#">
       <div class="field-holder">
         <input type="text" class="field" id="searchtxt" value="Search" title="Search" />

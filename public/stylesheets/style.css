@@ -266,7 +266,7 @@ h2.roomTitle{
 
 /*----------------------------------Slide Image pic-----------------------------------*/
 #slider-holder .slide-imageindex { float: right; display: inline; width:400px; height:400px; margin-top:-270px; margin-right:-100px;}
-#slider-holder .slide-infoindex { float: left; display: inline; width: 424px; padding-top: 23px; font-size:xx-small;}
+#slider-holder .slide-infoindex { float: left; display: inline; width: 424px; padding-top: 23px; }
 #slider-holder .slide-infoindex p { padding-bottom: 8px; }
 /*----------------------------------Slide Image end-----------------------------------*/
 
@@ -657,7 +657,7 @@ float:left;
 
 /*----------------------------------Slide Image pic-----------------------------------*/
 #slider-holder .slide-imageindex { float: right; display: inline; width:400px; height:400px; margin-top:-270px; margin-right:-100px;}
-#slider-holder .slide-infoindex { float: left; display: inline; width: 424px; padding-top: 23px; font-size:xx-small;}
+#slider-holder .slide-infoindex { float: left; display: inline; width: 424px; padding-top: 23px;}
 #slider-holder .slide-infoindex p { padding-bottom: 8px; }
 /*----------------------------------Slide Image end-----------------------------------*/
 

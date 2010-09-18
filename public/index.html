@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Monkey Talk</title>
+<title>Monkey Talk | Home</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 <link rel="stylesheet" href="stylesheets/signin.css" type="text/css" media="screen" title="no title" charset="utf-8" />
@@ -9,58 +9,20 @@
 <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 <script src="js/jquery-func.js" type="text/javascript"></script>
 <script src="js/signinDropdown.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-	
-	
-	/*------------- Top Room List Start  ---------------------------*/
-	numOfChatRooms = 5;
-	// Auto generated chatRoom
-	function chatRoomGen (){
-		var now = new Date();
-		var sec = now.getSeconds();
-		var rand1 = Math.random(sec); // to generate it everytime with different time.
-		var randUse = Math.floor(rand1 * (numOfChatRooms));
-		if(randUse == numOfChatRooms) randUse = 0; // to avoid getting more than array specified
-		return randUse;
-	}
-	
-	function chatRoomDisplay(){
-		var num = chatRoomGen();
-		newid = "chatRoomsList"+num;
-		document.getElementById(newid).style.display = "block";		
-	}
-	/*------------- Top Room List End  ---------------------------*/
-	
-
-
-
-</script>
+<script src="js/main.js" type="text/javascript"></script>
 </head>
 <body onload="chatRoomDisplay();">
 <div id="page" class="shell">
   <!-- Logo + Search + Navigation -->
   <div id="top">
     <div class="cl">&nbsp;</div>
-    <h1 id="logo"><a href="#">Monkey Talk</a></h1>
-    <script type="text/javascript">	
-    <!--
-    	function getsearch()
-    	{
-    		var srtxt = document.getElementById("searchtxt").value;
-    		window.open("http://www.google.com/search?forid=1&ie=utf-8&oe=UTF-8&hl=EN&q="+srtxt);
-    	}
-    -->
-    </script>
+    <h1 id="logo"><a href="index.html">Monkey Talk - Home</a></h1>
     <div id="topnav_container">
       <div id="topnav" class="topnav">
     	  <a href="signUp.html"class="topnav_links"><span>Sign Up</span></a>
-    	  
         <a href="login" class="topnav_links signin"><span>Sign In</span></a> 
       </div>
       <form onsubmit="getsearch()" method="get" id="searchIndex" action="">
-
-
         <div>
         	<input type="submit" class="button button-Index" value="Search" />
   	  </div>
@@ -71,23 +33,24 @@
         <div class="cl">&nbsp;</div>
       </form>
       <fieldset id="signin_menu">
-        <form method="post" id="signin"  action="">
+        <form method="post" id="signin" action="">
+          <div>
           <label for="username">Username or email</label>
-          <input tabindex="1000" id="username" name="username" value="" title="username" tabindex="4" type="text">
-          </p>
-          <p>
+          <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
+          </div>
+          <div>
             <label for="password">Password</label>
-            <input tabindex="1010" id="password" name="password" value="" title="password" tabindex="5" type="password">
-          </p>
+            <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
+          </div>
           <p class="remember">
-            <input tabindex="1020" id="signin_submit" value="Sign in" tabindex="6" type="submit">
-            <input tabindex="1030" id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+            <input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
+            <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
             <label for="remember">Remember me</label>
           </p>
-          <p class="forgot"> <a href="#" id="resend_password_link">Forgot your password?</a> </p>
-          <p class="forgot-username"> <A id=forgot_username_link 
-    title="If you remember your password, try logging in with your email" 
-    href="#">Forgot your username?</A> </p>
+          <div>
+          <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
+          <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
+          </div>
         </form>
       </fieldset>
       
@@ -143,13 +106,13 @@
           <li>
             <div class="slide-infoindex">
               <h2 class="notext slide2Index">Create Chatroom OR Join Existing Room</h2>
-              <p>
+              <p> <br/>
               	<b>CREATE</b> your own chatroom just by following some simple steps.. <b>INVITE</b> people to join your chat room,
               	Or you can <b>JOIN</b> other's people chat room, or existing chat room. 
               </p>
              <!-- <a href="#" class="button-more">More</a> --> 
              </div>
-            <div class="slide-imageindex"> <img src="" alt="Network" /> </div>
+            <div class="slide-imageindex"> <img src="" alt="http://www.google.com.au" /> </div>
           </li>
           <li>
             <div class="slide-infoindex">
@@ -161,7 +124,7 @@
               </p>
               <!--<a href="#" class="button-more">More</a>--> 
               </div>
-            <div class="slide-imageindex"> <img src="images/image2-audiofile.gif" alt="Image3" style="margin-right:-10px; margin-top:-50px;"/> </div>
+            <div class="slide-imageindex"> <img src="images/image2-audiofile.gif" alt="http://www.catpin.com/bubbletest/" style="margin-right:-10px; margin-top:-50px;"/> </div>
           </li>
         </ul>
       </div>
@@ -179,21 +142,21 @@
       	<div class="colFrame list">
         	<h2 class="headText"><a href="www.google.com">Monkey Talk's Members</a></h2>
        		<ul>
-       			<li><img src="images/member/6a00d09e63602bbe2b00d41429b992685e-50si.jpg" alt="teen1"/></li>
-       			<li><img src="images/member/teen2.jpg" alt="teen2"/></li>
-       			<li><img src="images/member/teen3.jpg" alt="teen3"/></li>
-       			<li><img src="images/member/teen4.jpg" alt="teen4"/></li>
-       			<li><img src="images/member/teen5.gif" alt="teen5"/></li>
-       			<li><img src="images/member/teen6.jpg" alt="teen6"/></li>
-       			<li><img src="images/member/teen7.jpg" alt="teen7"/></li>
-       			<li><img src="images/member/teen8.jpg" alt="teen8"/></li>
-       			<li><img src="images/member/teen9.jpg" alt="teen9"/></li>
+       			<li><img src="images/member/6a00d09e63602bbe2b00d41429b992685e-50si.jpg" alt="http://teenchat.groups.vox.com"/></li>
+       			<li><img src="images/member/teen2.jpg" alt="http://www.foxnews.com"/></li>
+       			<li><img src="images/member/teen3.jpg" alt="http://www.bigmoneyarcade.com"/></li>
+       			<li><img src="images/member/teen4.jpg" alt="http://www.bigmoneyarcade.com"/></li>
+       			<li><img src="images/member/teen5.gif" alt="http://www.bigmoneyarcade.com"/></li>
+       			<li><img src="images/member/teen6.jpg" alt="http://www.bigmoneyarcade.com"/></li>
+       			<li><img src="images/member/teen7.jpg" alt="http://teenfire.ning.com"/></li>
+       			<li><img src="images/member/teen8.jpg" alt="http://teenfire.ning.com"/></li>
+       			<li><img src="images/member/teen9.jpg" alt="http://teenfire.ning.com"/></li>
        			<li><img src="images/member/teen10.jpg" alt="teen10"/></li>
-       			<li><img src="images/member/teen11.jpg" alt="teen11"/></li>
-       			<li><img src="images/member/teen13.jpg" alt="teen13"/></li>
-       			<li><img src="images/member/teen14.jpg" alt="teen14"/></li>
-       			<li><img src="images/member/teen15.jpg" alt="teen15"/></li>
-       			<li><img src="images/member/teen17.jpg" alt="teen17"/></li>
+       			<li><img src="images/member/teen11.jpg" alt="http://www.yourteenager.co.uk"/></li>
+       			<li><img src="images/member/teen13.jpg" alt="http://www.yourteenager.co.uk"/></li>
+       			<li><img src="images/member/teen14.jpg" alt="http://teenfire.ning.com"/></li>
+       			<li><img src="images/member/teen15.jpg" alt="http://www.yourteenager.co.uk"/></li>
+       			<li><img src="images/member/teen17.jpg" alt="http://www.yourteenager.co.uk"/></li>
        		</ul>
        </div>
      </div>
@@ -203,17 +166,17 @@
        	
        	<div id="chatRoomsList0"  class="chatRoomsList0" style="display:none;">
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/Sun.jpg" alt="Good Morning Room"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/Sun.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Good Morning Monkey Talk </h2>
 				<p> 105 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/179-1-50.jpg" alt="Speed English"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/179-1-50.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Speeding Ur English Now </h2>
 				<p> 18 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/cam.jpg" alt="English Movie"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/cam.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> English Movie Chat Room </h2>
 				<p> 200 People</p>
 			</div>
@@ -221,17 +184,17 @@
 		
 		<div id="chatRoomsList1"  class="chatRoomsList1" style="display:none;">
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/images.jpg" alt="Smile"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/images.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Smile and Talk English </h2>
 				<p> 80 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/game.png" alt="Game"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/game.png" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Hobby Chat Room </h2>
 				<p> 35 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/monkey.gif" alt="Monkey"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/monkey.gif" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Monkey Talk Favourite ChatRoom </h2>
 				<p> 250 People</p>
 
@@ -240,17 +203,17 @@
 		
 		<div id="chatRoomsList2"  class="chatRoomsList2" style="display:none;">
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/music.png" alt="Music"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/music.png" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> English Music Chat Room </h2>
 				<p> 89 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/nevergiveup.jpg" alt="Never Give Up"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/nevergiveup.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Never Give Up </h2>
 				<p> 125 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/panda.png" alt="Panda"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/panda.png" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Random Chat Room </h2>
 				<p> 25 People</p>
 			</div>
@@ -258,17 +221,17 @@
 		
 		<div id="chatRoomsList3"  class="chatRoomsList3" style="display:none;">
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/people.jpg" alt="Diversity"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/people.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Diversity Chat Room </h2>
 				<p> 75 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/question.png" alt="Question"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/question.png" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Help  </h2>
 				<p> 5 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/world.jpg" alt="World"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/world.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> World Chat  </h2>
 				<p> 350 People</p>
 			</div>
@@ -276,17 +239,17 @@
 		
 		<div id="chatRoomsList4"  class="chatRoomsList4" style="display:none;">
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/thumb up.jpg" alt="ThumbsUp"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/thumb up.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Successfull Learners </h2>
 				<p> 180 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/video1.gif" alt="Video"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/video1.gif" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Random Activities Chat Room </h2>
 				<p> 34 People</p>
 			</div>
 			<div class="chatRoom">
-				<img  class="chatRoom" src="images/ChatRoomListPic/people1.jpg" alt="All"/>
+				<img  class="chatRoom" src="images/ChatRoomListPic/people1.jpg" alt="http://www.google.com.au/images"/>
 				<h2 class="roomTitle"> Hey All Members</h2>
 				<p> 220 People</p>
 			</div>
@@ -296,31 +259,6 @@
       <div class="cl">&nbsp;</div>
       &nbsp;
     </div>
-    <!-- END Two Column Content -->
-    <!-- Three Column Content -->
-    <!--
-    <div class="cols two-thirds-cols">
-      <div class="cl">&nbsp;</div>
-      <div class="col">
-		<img src="images/newgreen1.gif" alt="New Image" />
-		<br/><br/>       
-		<h2 class="subheading"> What's NEWS ??? </h2>
-        <ul class="content list">
-			<li> Create your own chatroom and Invite friends </li>
-			<li> Share your file, video, audio, and picture in your chatroom </li>
-			<li> Fascinating topics, discussion, or gossips </li>
-			<li> Practice to avoid culture shock since today </li>
-			<li> Meet range of people from different country, and different culture </li>
-        </ul>
-        <br/> <br/>
-        <h2 class="subheading"> All of this for FREEE ... </h2>
-      </div>
-      <div class="cl">&nbsp;</div>
-    </div>
-    <div class="cols one-third-cols-Index">
-    </div>-->
-    <!-- END Three Column Content -->
-    
   </div>
   <!-- END Main -->
   <!-- Footer -->
