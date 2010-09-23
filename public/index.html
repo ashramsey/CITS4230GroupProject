@@ -4,13 +4,13 @@
 <title>Monkey Talk | Home</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" />
-<link type="text/css" rel="stylesheet" href="stylesheets/signin.css" media="screen" title="no title" />
 <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="js/jquery-func.js"></script>
 <script type="text/javascript" src="js/signinDropdown.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/signinDropdown.js"></script>
 </head>
 <body id="home" onload="chatRoomDisplay();">
 <div id="page" class="shell">
@@ -21,12 +21,10 @@
     <!-- Login Signup and Search Navigation -->
     <div id="topnav_container">
         <ul id="topnav" class="topnav">
-            <li>
+   			<li>        
                 <a href="signUp.html" class="topnav_links"><span>Sign Up</span></a>
-            </li>
-            <li>
                 <a href="login" class="topnav_links signin"><span>Sign In</span></a>
-            </li>
+           </li>
         </ul>
         <form onsubmit="getsearch()" method="get" id="searchIndex" action="">
             <div>
