@@ -102,6 +102,16 @@ $().ready(function() {
     // Uses the jQuery validation plug-in 1.7 - (refer to for reference)
     // validate the login form feilds
     $("#signin").validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 5
+            },
+            password: {
+                required: true,
+                minlength: 5
+            }
+        },
         messages: {
             username: {
                 required:   "Please enter a username",
@@ -118,8 +128,7 @@ $().ready(function() {
         rules: {
             username: {
                 required: true,
-                minlength: 5,
-                remote: "users.php"
+                minlength: 5
             },
             password: {
                 required: true,
@@ -154,6 +163,20 @@ $().ready(function() {
     });
     // validate the comment form feilds
     $("#contact-form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            comment: {
+                required: true,
+                minlength: 5
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
         messages: {
             name: {
                 required:   "Please enter your name",
