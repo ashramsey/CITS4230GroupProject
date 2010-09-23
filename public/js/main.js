@@ -78,7 +78,6 @@ $(document).ready(function() {
   	}
   	return false; //Prevent the browser jump to the link anchor
   });
-  
 });
 /* -------------------------------------------- END - Support Page - Topics Slider -------------------------*/
 
@@ -96,3 +95,78 @@ document.getElementById("otherres").style.display="none";
 }
 
 /* -------------------------------------------- END - Signup Page ---------------------------------------*/
+
+
+/* -------------------------------------------- START - Form Validation ---------------------------------------*/
+$().ready(function() {
+    // Uses the jQuery validation plug-in 1.7 - (refer to for reference)
+    // validate the login form feilds
+    $("#signin").validate({
+        messages: {
+            username: {
+                required:   "Please enter a username",
+                minlength:  "Your username must consist of at least 5 characters"
+            },
+            password: {
+                required:   "Please provide a password",
+                minlength:  "Your password must be at least 5 characters long",
+            },
+        }
+    });
+    // validate the signup form feilds
+    $("#signup-form").validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 5,
+                remote: "users.php"
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            password_confirm: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            username: {
+                required:   "Please enter a username",
+                minlength:  "Your username must consist of at least 5 characters"
+            },
+            email:          "Please enter a valid email address",
+            password: {
+                required:   "Please provide a password",
+                minlength:  "Your password must be at least 5 characters long",
+            },
+            password_confirm: {
+                required:   "Please provide a password",
+                minlength:  "Your password must be at least 5 characters long",
+                equalTo:    "Please enter the same password as above"
+            }
+        }
+    });
+    // validate the comment form feilds
+    $("#contact-form").validate({
+        messages: {
+            name: {
+                required:   "Please enter your name",
+                minlength:  "Please enter more than 2 characters"
+            },
+            email:          "Please enter a valid email address",
+            comment: {
+                required:   "Please provide a message",
+                minlength:  "Your message must be at least 5 characters long"
+            }
+        }
+    });
+    
+});
+/* -------------------------------------------- END - Form Validation ---------------------------------------*/
+

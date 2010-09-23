@@ -1,13 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Sign Up - MonkeyTalk</title>
+<title>MonkeyTalk | Sign Up</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
-<script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
-<script src="js/jquery-func.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript" ></script>
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8" />
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="js/jquery-func.js"></script>
+<script type="text/javascript" src="js/signinDropdown.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -48,9 +50,9 @@
     </div>
   </div>
   <!-- END Logo + Search + Navigation -->
-  
+  <div id="main">
   <!-- START SUPFORM --!>
-  <form action="" id="main">
+  <form action="" id="signup-form">
     <!-- Three Column Content -->
      <div class="top">
         <h1>Sign Up</h1><br />
@@ -59,20 +61,20 @@
       <div class="main-col">
 	<h2>Personal Details</h2>
         <div class="userin">
-	<label for="usrn">Username:</label><br />
-	<input type="text" name="usrn" size="25" />
+	<label for="username">Username:</label><br />
+	<input type="text" name="username" id="username" size="25" />
 	</div>
 	<div class="userin">
-	<label for="eaddress">Email Address:</label><br />
-	<input type="text" name="eaddress" size="25"  />
+	<label for="email">Email Address:</label><br />
+	<input type="text" name="email" id="email" size="25"  />
 	</div>
 	<div class="userin">
-	<label for="pword">Password:</label><br />
-	<input type="password" name="pword" size="25" />
+	<label for="password">Password:</label><br />
+	<input type="password" name="password" id="password" size="25" />
 	</div>
 	<div class="userin">
-	<label for="cpword">Confirm Password:</label><br />
-	<input type="password" name="cpword" size="25" />
+	<label for="password_confirm">Confirm Password:</label><br />
+	<input type="password" name="password_confirm" id="password_confirm" size="25" />
 	</div>
 	<div class="userin">
 	<label for="memb">Citizenship:</label><br />
@@ -351,7 +353,7 @@
       </div>
  </form>
  <!-- END SUPFORM --!>
-  
+  </div>
   <!-- Footer -->
 <div id="footer" class="">
     <div id="footer-left">
