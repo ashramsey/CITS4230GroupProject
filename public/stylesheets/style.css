@@ -62,7 +62,7 @@ p { padding-bottom: 18px; }
 #search .field-holder { float: left; display: inline; width: 196px; background: url(../images/search-field.gif) no-repeat 0 0; padding: 1px; }
 #search .field { width: 186px; border: 0; background: none; }
 #search .button { float: right; display: inline; width: 25px; height: 25px; font-size: 0; line-height: 0; text-indent: -4000px; }
-#search .button { background: url(../images/search-button.gif) no-repeat 0 0; border: 0; }
+#search .button { background: url(../images/search-button.png) no-repeat 0 0; border: 0; }
 
 #navigation { width:960px; height: 38px; background:none repeat scroll 0 0 #3D3E34; margin-top:16px; padding: 8px 20px 6px; }
 #navigation { -webkit-box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 10px; -moz-box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.50); }
@@ -133,16 +133,16 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 *                            FORM STYLES                                                    *
 *********************************************************************************************/
 
-    form                                        { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; }
-    label.error                                 { float:none; display:block; color:#FF4200; padding-left:0.5em; vertical-align:top; margin-top:2px !important; }
+    form                               { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; }
+    label.error                        { float:none; display:block; color:#FF4200; padding-left:0.5em; vertical-align:top; margin-top:2px !important; }
     
     
     /*----------------------------------Search Index Form ----------------------------------*/
     #searchIndex                        { float: right; display: inline-block; padding-top: 0; width: 230px; }
-    #searchIndex .field-Index           { width: 186px; border: 0 none; background: none repeat Scrollbar 0 0  transparent; color: #969696; }
+    #searchIndex .field-Index           { width: 186px; border: 0 none; background: none; color: #969696; }
     #searchIndex .field-holder-Index    { float:right; width: 196px; background: url(../images/search-field.gif) no-repeat 0 0; padding: 1px; margin-right:7px; }
     #searchIndex .button-Index          { float:right; width: 25px; height: 25px; font-size: 0; line-height: 0; text-indent: -4000px; }
-    #searchIndex .button-Index          { background: url(../images/search-button.gif) no-repeat 0 0; border: 0; }
+    #searchIndex .button-Index          { background: url(../images/search-button.png) no-repeat 0 0; border: 0; }
     #searchIndex .sign-in               { padding:5px; float:left; padding-right: 20px; }
     #searchIndex .sign-up               { float:left; padding:5px; padding-right:20px; }
     #searchIndex a, 
@@ -153,7 +153,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
     
     /*----------------------------------Contact Us Form ---------------------------------------*/
     #contact-form                       { font:1.0em "Lucida Grande",Lucida,Verdana,sans-serif; padding-left:20px; }
-    #contact-form label                 { clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding:right:4px; width:100; margin-top:10px; }
+    #contact-form label                 { clear:left; display:block; float:left; font-weight:bold; line-height:1.2em; padding-right:4px; width:100px; margin-top:10px; }
     #contact-form .contact-input        { font-family:Futura,AppleGothic,CenturyGothic,sans-serif; background-color:#E8E8E8; color:#333333; border:1px inset #5F5F5F; font-size:1em; margin:2px; min-height:20px; padding:2px; width:220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
     #contact-form .contact-button       { background:url("../images/send.png") no-repeat scroll center top transparent; border:0 none; clear:both; color:#FFFFFF; cursor:pointer; font-size:1em; font-weight:bold; height:41px; margin:12px 2px 20px 2px; position:relative; text-align:center; vertical-align:middle; width:110px; }
     #contact-form .contact-button:hover, 
