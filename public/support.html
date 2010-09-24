@@ -11,6 +11,7 @@
 <script type="text/javascript" src="js/signinDropdown.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite-beta.js"></script>
 </head>
 <body id="support">
 <div id="page" class="shell">
@@ -22,22 +23,24 @@
     <div id="topnav_container">
         <ul id="topnav" class="topnav">
             <li>
-                <a href="signUp.html" class="topnav_links"><span>Sign Up</span></a>
+                <a href="signup.html" class="topnav_links"><span>Sign Up</span></a>
             </li>
             <li>
                 <a href="login" class="topnav_links signin"><span>Sign In</span></a>
             </li>
-        </ul>
-        <form onsubmit="getsearch()" method="get" id="searchIndex" action="">
-            <div>
-                <input type="submit" class="button button-Index" value="Search" />
-            </div>
-            <div class="field-holder-Index">
-                <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
-            </div>
+            <li class="last">
+                <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
+                    <div>
+                        <input type="submit" class="button button-Index" value="Search" />
+                    </div>
+                    <div class="field-holder-Index">
+                        <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
+                    </div>
 
-            <div class="cl">&nbsp;</div>
-        </form>
+                    <div class="cl">&nbsp;</div>
+                </form>
+            </li>
+        </ul>
         <fieldset id="signin_menu">
             <form method="post" id="signin" action="">
                 <div>

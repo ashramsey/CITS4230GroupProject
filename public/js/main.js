@@ -119,8 +119,8 @@ $().ready(function() {
             },
             password: {
                 required:   "Please provide a password",
-                minlength:  "Your password must be at least 5 characters long",
-            },
+                minlength:  "Your password must be at least 5 characters long"
+            }
         }
     });
     // validate the signup form feilds
@@ -152,7 +152,7 @@ $().ready(function() {
             email:          "Please enter a valid email address",
             password: {
                 required:   "Please provide a password",
-                minlength:  "Your password must be at least 5 characters long",
+                minlength:  "Your password must be at least 5 characters long"
             },
             password_confirm: {
                 required:   "Please provide a password",
