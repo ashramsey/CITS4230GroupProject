@@ -4,6 +4,7 @@
 <title>MonkeyTalk | Sign Up</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" />
+<link type="text/css" rel="stylesheet" href="stylesheets/signin.css" media="screen" title="no title" />
 <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="js/jquery-func.js"></script>
@@ -21,22 +22,54 @@
   <!-- Logo + Search + Navigation -->
   <div id="top">
     <div class="cl">&nbsp;</div>
-    <img src="images/logo2.png" alt="Logo_small"/>
 
-    <!-- Hidden to reduce size of gap -->
-    <!--<h1 id="logo"><a href="#">MONDAYS</a></h1> -->
+   <h1 id="logo"><a href="#">MonkeyTalk - Sign Up</a></h1>
 
-    <!-- START SEARCHBAR --!>
-    <form action="#" method="post" id="search">
-      <div class="field-holder">
-        <input type="text" class="field" value="Search" title="Search" />
-      </div>
-      <div>
-      	<input type="submit" class="button" value="Search" />
-      </div>
-      <div class="cl">&nbsp;</div>
-    </form>
-    <!-- END SEARCHBAR --!>  
+   <!-- Login Signup and Search Navigation -->
+    <div id="topnav_container">
+        <ul id="topnav" class="topnav">
+            <li>
+                <a href="signup.html" class="topnav_links"><span>Sign Up</span></a>
+            </li>
+            <li>
+                <a href="login" class="topnav_links signin"><span>Sign In</span></a>
+            </li>
+            <li class="last">
+                <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
+                    <div>
+                        <input type="submit" class="button button-Index" value="Search" />
+                    </div>
+                    <div class="field-holder-Index">
+                        <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
+                    </div>
+
+                    <div class="cl">&nbsp;</div>
+                </form>
+            </li>
+        </ul>
+        <fieldset id="signin_menu">
+            <form method="post" id="signin" action="">
+                <div>
+                    <label for="username">Username or email</label>
+                    <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
+                </div>
+                <p class="remember">
+                    <input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
+                    <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
+                    <label for="remember">Remember me</label>
+                </p>
+                <div>
+                    <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
+                    <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <!-- END - Login Signup and Search Navigation -->  
 
     <!-- NAVIGATION --!>  
     <div class="cl">&nbsp;</div>
@@ -348,7 +381,7 @@
 	<img src="images/verify.png" alt="verification image" />
 	<p>Please enter the above characters:
 	<input type="text" name="verify" /> <br />
-	<input class="userin" type="reset" value="Reset All" />
+	<input class="userin" type="reset" value="Reset All" onclick="hideOtherRes()" />
 	<input class="userin" type="submit" value="Submit Registration!" />
 	</p>
       </div>

@@ -90,8 +90,12 @@ if (memid.options[memid.selectedIndex].text=="--Other--"){
 document.getElementById("otherres").style.display="block";
 }
 else {
-document.getElementById("otherres").style.display="none";
+    hideOtherRes();
 }
+}
+
+function hideOtherRes() {
+document.getElementById("otherres").style.display="none";
 }
 
 /* -------------------------------------------- END - Signup Page ---------------------------------------*/
