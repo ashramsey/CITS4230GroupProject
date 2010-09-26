@@ -85,7 +85,7 @@ $(document).ready(function() {
 /* -------------------------------------------- START - Signup Page ---------------------------------------*/
 
 function showOtherRes() {
-var memid=document.getElementById("member_country_id");
+var memid=document.getElementById("memb");
 if (memid.options[memid.selectedIndex].text=="--Other--"){
 document.getElementById("otherres").style.display="block";
 }
