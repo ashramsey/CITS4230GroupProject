@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
     outline: 0;
     font-weight: inherit;
     font-style: inherit;
@@ -265,9 +264,10 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 /***************************** SIGNUP PAGE START ************************************/
         #otherres   { display: none }
-        .main-col   { width: 350px; float:right; margin-left: 200px }
+        .main-col   { width: 350px; float:right; margin-left: 150px }
         .top        { float: left }
         .userin     { margin-top: 20px }
+
 /***************************** SIGNUP PAGE END ************************************/
 
 
