@@ -16,62 +16,62 @@
 
 <body>
 
-<!-- START PAGE --!>
+<!-- START PAGE -->
 <div id="page" class="shell">
   
   <!-- Logo + Search + Navigation -->
-  <div id="top">
-    <div class="cl">&nbsp;</div>
-
-   <h1 id="logo"><a href="#">MonkeyTalk - Sign Up</a></h1>
-
-   <!-- Login Signup and Search Navigation -->
+<div id="top">
+  <div class="cl">&nbsp;</div>
+    
+    <h1 id="logo"><a href="#">MonkeyTalk - Sign Up</a></h1>
+    
+    <!-- Login Signup and Search Navigation -->
     <div id="topnav_container">
-        <ul id="topnav" class="topnav">
-            <li>
-                <a href="signup.html" class="topnav_links"><span>Sign Up</span></a>
-            </li>
-            <li>
-                <a href="login" class="topnav_links signin"><span>Sign In</span></a>
-            </li>
-            <li class="last">
-                <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
-                    <div>
-                        <input type="submit" class="button button-Index" value="Search" />
-                    </div>
-                    <div class="field-holder-Index">
-                        <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
-                    </div>
-
-                    <div class="cl">&nbsp;</div>
-                </form>
-            </li>
-        </ul>
-        <fieldset id="signin_menu">
-            <form method="post" id="signin" action="">
-                <div>
-                    <label for="username">Username or email</label>
-                    <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
-                </div>
-                <p class="remember">
-                    <input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
-                    <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
-                    <label for="remember">Remember me</label>
-                </p>
-                <div>
-                    <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
-                    <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
-                </div>
-            </form>
-        </fieldset>
-    </div>
+      <ul id="topnav" class="topnav">
+	  <li>
+	  <a href="signup.html" class="topnav_links"><span>Sign Up</span></a>
+	  </li>
+	    <li>
+	    <a href="login" class="topnav_links signin"><span>Sign In</span></a>
+	    </li>
+	    <li class="last">
+	    <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
+	    <div>
+		      <input type="submit" class="button button-Index" value="Search" />
+		    </div>
+		    <div class="field-holder-Index">
+		      <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
+		    </div>
+		    
+		    <div class="cl">&nbsp;</div>
+		    </form>
+		    </li>
+	  </ul>
+	<fieldset id="signin_menu">
+	<form method="post" id="signin" action="">
+      <div>
+		  <label for="username">Username or email</label>
+		  <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
+		</div>
+		<div>
+		  <label for="password">Password</label>
+		  <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
+		</div>
+		<p class="remember">
+		<input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
+		<input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
+		<label for="remember">Remember me</label>
+		</p>
+		<div>
+		  <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
+		  <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
+		</div>
+		</form>
+		</fieldset>
+		</div>
     <!-- END - Login Signup and Search Navigation -->  
 
-    <!-- NAVIGATION --!>  
+    <!-- NAVIGATION -->  
     <div class="cl">&nbsp;</div>
     <div id="navigation">
       <ul>
@@ -83,9 +83,10 @@
       </ul>
     </div>
   </div>
-  <!-- END Logo + Search + Navigation -->
+  <!-- END HEAD -->
+  
   <div id="main">
-  <!-- START SUPFORM --!>
+  <!-- START SUPFORM -->
   <form action="" id="signup-form">
     <!-- Three Column Content -->
      <div class="top">
@@ -95,16 +96,16 @@
       <div class="main-col">
 	<h2>Personal Details</h2>
         <div class="userin">
-	<label for="username">Username:</label><br />
-	<input type="text" name="username" id="username" size="25" />
+	<label for="usernam">Username:</label><br />
+	<input type="text" name="usernam" id="usernam" size="25" />
 	</div>
 	<div class="userin">
 	<label for="email">Email Address:</label><br />
 	<input type="text" name="email" id="email" size="25"  />
 	</div>
 	<div class="userin">
-	<label for="password">Password:</label><br />
-	<input type="password" name="password" id="password" size="25" />
+	<label for="pasword">Password:</label><br />
+	<input type="password" name="pasword" id="pasword" size="25" />
 	</div>
 	<div class="userin">
 	<label for="password_confirm">Confirm Password:</label><br />
@@ -112,7 +113,7 @@
 	</div>
 	<div class="userin">
 	<label for="memb">Citizenship:</label><br />
-	<select id="member_country_id" name="memb" onchange="showOtherRes();">
+	<select id="memb" name="memb" onchange="showOtherRes();">
               <option>Please Select</option>
 	      <option value="0">--Other--</option>
 	      <option value="1">Afghanistan</option>
@@ -359,7 +360,7 @@
 	    </div><br />
 	    <p id="otherres">
 	    <label for="res">Please Specify:</label>
-	    <input type="text" name="res" />
+	    <input type="text" name="res" id="res" />
 	    </p>
 	    </div>
 	  <div class="cl">&nbsp;</div>
@@ -367,12 +368,9 @@
 
       <!-- Two Column Content -->
       <div class="main-col">
-       <p>
 	<h2>Tell us about yourself!</h2>
-        <p>
 	<textarea name="about" rows="10" cols="60">Hobbies? Favourite food? Telling others a little about yourself may help you find friends and give you more to talk about!
-	</textarea> <br />
-	</p>
+	</textarea> <br /> <br />
       </div>
       <div class="cl">&nbsp;</div>
     <!-- END Two Column Content -->
@@ -386,10 +384,10 @@
 	</p>
       </div>
  </form>
- <!-- END SUPFORM --!>
+ <!-- END SUPFORM -->
   </div>
   <!-- Footer -->
-<div id="footer" class="">
+<div id="footer">
     <div id="footer-left">
         <p>
             <a href="http://validator.w3.org/check?uri=referer">
@@ -419,6 +417,6 @@
   </div>
   <!-- END Footer -->
 </div>
-<!-- END PAGE --!>
+<!-- END PAGE -->
 </body>
 </html>
