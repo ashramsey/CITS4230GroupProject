@@ -117,7 +117,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 #footer { width:1000px; height: 31px; line-height:31px; background:none repeat scroll 0 0 #3D3E34; color: #DDD; padding:0px; }
 #footer { -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px; -moz-box-shadow:0px 5px 20px 0px rgba(0, 0, 0, 0.75); }
-#footer p { padding-bottom: 0; }
+#footer p { padding-bottom: 0; height: 31px }
 #footer a { color: #DDD; text-decoration: none; }
 #footer a:hover { color: #FF5500; }
 #footer div { display:inline-block; padding:0; }
@@ -216,10 +216,11 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
         /*---------------------------Two-Thirds Container Start ----------------------------*/
         #support .txt-support                       { list-style:none; background: #eee; margin:0px 0 20px; padding:10px; -webkit-border-radius: 0 0 4px 4px;  -moz-border-radius: 0 0 4px 4px; color: #333; }
         #support .two-thirds-cols                   { min-height:515px; }
-        #support .two-thirds-cols h2                { margin:0; padding:5px 10px; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#EEEEEE'); /* for IE8+ */
+        #support .two-thirds-cols h2                { margin:0; padding:5px 10px; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#EEEEEE'); /* for IE8+ (CSS3) */
                                                         background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#EEE)); /* for webkit browsers */
-                                                        background: -moz-linear-gradient(center top,  #CCC,  #EEE); /* for firefox 3.6+ */ 
-                                                        .background-color:#CCCCCC; /* for ie7 */ }
+                                                        background: -moz-linear-gradient(center top,  #CCCCCC,  #EEEEEE); /* for firefox 3.6+ */ 
+                                                        .background-color:#CCCCCC; } /* for ie7 */
+
         #support .two-thirds-cols h3                { margin-top:10px; }
         #support .two-thirds-cols h3 a              { color: #464646; font-family: "Trebuchet MS", Tahoma, Sans-Serif; text-decoration:none; }
         #support .two-thirds-cols h3 a:hover, 

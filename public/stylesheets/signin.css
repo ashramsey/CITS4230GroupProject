@@ -28,7 +28,7 @@ a img {
     font-size:13px;
     width:400px;
 }
-.topnav { zoom: 1; *display: inline; }
+.topnav { zoom: 1; *display: inline; } /* IE7 compatibility  */
 #topnav li { float: left; display: inline; list-style-type: none; margin-right:2px; width:78px; }
 #topnav li.last { margin-right:0; width:230px; }
 #topnav a.topnav_links {
@@ -49,7 +49,7 @@ a img {
     color:#FF5500;
 }
 #topnav a.topnav_links, #topnav a.topnav_links:hover {
-    *background-position:0 3px!important;
+    *background-position:0 3px !important;
 }
 
 a.topnav_links {
@@ -145,7 +145,7 @@ a.signin.menu-open span {
     margin:0 5px 0 0;
     font-weight:bold;
 }
-#signin_submit::-moz-focus-inner {
+#signin_submit:-moz-focus-inner {
 padding:0;
 border:0;
 }
