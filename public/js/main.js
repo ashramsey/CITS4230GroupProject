@@ -81,6 +81,16 @@ $(document).ready(function() {
 });
 /* -------------------------------------------- END - Support Page - Topics Slider -------------------------*/
 
+/* -------------------------------------------- START - Support Page -------------------------*/
+function feedback() {
+    document.getElementById("contact-subject").value="User Feedback";
+    document.getElementById("contact-subject").style.background="#FF9933";
+}
+
+function donate() {
+alert("Though we take immense pleasure in taking people's money, this feature is still under construction.");
+}
+/* -------------------------------------------- END - Support Page -------------------------*/
 
 /* -------------------------------------------- START - Signup Page ---------------------------------------*/
 
