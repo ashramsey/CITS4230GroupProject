@@ -8,8 +8,7 @@
 
 $(document).ready(function() {
 
-    $(".signin").click(function(e) {
-        e.preventDefault();
+    $(".signin").click(function() {
         $("fieldset#signin_menu").toggle();
         $(".signin").toggleClass("menu-open");
     });
