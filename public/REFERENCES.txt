@@ -1,0 +1,45 @@
+SITE TEMPLATE:
+**JOHN
+
+JQUERY PLUGINS:
+/public/js/
+
+    jquery-1.4.1.min.js         - John Resig,     http://jquery.com/
+    jquery-func.js              - **JOHN
+    jquery.jcarousel.pack.js    - Jan Sorgalla,   http://sorgalla.com/jcarousel/    
+    jquery.validate.min.js      - Jörn Zaefferer, http://docs.jquery.com/Plugins/Validation
+    signinDropdown.js           - Lam Nguyen,   http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
+
+
+IMAGES:
+/public/images/
+
+    **JOHN
+    arr.gif                 
+    bg.gif                  
+    bottom_roundBg.gif      
+    button-more.gif         
+    button-next.gif         
+    button-prev.gif         
+    footer.gif
+    img1.gif
+    txt-247.gif
+    txt-monday-again.gif
+    txt-monkey-again.gif
+    txt-we-love-mondays.gif
+    txt-wedothis.gif
+    image2-index.gif
+ 
+    **JOHN
+    about_us_hdr.jpg    -
+    
+    TONG
+    construct.gif       - cydar.org
+
+    globe.png           - yougottabehere.com
+    media_img.png       - Scott Copeland, www.nimbus-media.com
+    supportImg.png      - PIXAR, http://disneydvd.disney.go.com/monsters-inc.html
+                  
+
+ChatRoomListPic/.       - http://www.google.com.au (image search)
+member/.                - http://www.bigmoneyarcade.com, http://teenfire.ning.com, http://www.yourteenager.co.uk, http://www.foxnews.com
