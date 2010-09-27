@@ -1,22 +1,22 @@
 SITE TEMPLATE:
-**JOHN
+template development is based on downloads from www.88web.org
 
 JQUERY PLUGINS:
 /public/js/
 
-    jquery-1.4.1.min.js         - John Resig,     http://jquery.com/
-    jquery-func.js              - **JOHN
-    jquery.jcarousel.pack.js    - Jan Sorgalla,   http://sorgalla.com/jcarousel/    
+    jquery-1.4.1.min.js         - John Resig,      http://jquery.com/
+    jquery-func.js              - unknown author,  http://www.88web.org
+    jquery.jcarousel.pack.js    - Jan Sorgalla,    http://sorgalla.com/jcarousel/    
     jquery.validate.min.js      - Jörn Zaefferer, http://docs.jquery.com/Plugins/Validation
-    signinDropdown.js           - Lam Nguyen,   http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
+    signinDropdown.js           - Lam Nguyen,      http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
 
 
 IMAGES:
 /public/images/
 
-    **JOHN
-    arr.gif                 
-    bg.gif                  
+    JOHN
+    arr.gif              - www.88web.org    
+    bg.gif                 (same for all the followings) 
     bottom_roundBg.gif      
     button-more.gif         
     button-next.gif         
@@ -29,9 +29,7 @@ IMAGES:
     txt-we-love-mondays.gif
     txt-wedothis.gif
     image2-index.gif
- 
-    **JOHN
-    about_us_hdr.jpg    -
+    about_us_hdr.jpg    
     
     TONG
     construct.gif       - cydar.org

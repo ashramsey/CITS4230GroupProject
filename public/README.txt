@@ -33,9 +33,8 @@ This file houses all the javascript/jquery functionality we have developed.
         Initaialises the above function and displays them as a block level element.
     
     
-    mystyle() -
-    
-    myfunc() -
+    mystyle() & myfunc() -
+    	Change the colour of the text - "Talk" constantly.
     
     Topics Slider -
         This jquery code is used in the support.html and toggles the display of answers/information about support topics. It aims

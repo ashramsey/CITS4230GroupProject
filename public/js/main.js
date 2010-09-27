@@ -88,7 +88,8 @@ function feedback() {
 }
 
 function donate() {
-alert("Though we take immense pleasure in taking people's money, this feature is still under construction.");
+	var str = "Please bank your money into our account:\nBankPerth BSB: 123-4567 ACC: 1234-567-8 Monkey\nThanks for your support!";
+	alert(str);
 }
 /* -------------------------------------------- END - Support Page -------------------------*/
 
