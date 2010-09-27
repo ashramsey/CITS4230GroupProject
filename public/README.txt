@@ -62,6 +62,6 @@ This file houses all the javascript/jquery functionality we have developed.
         the id's of specific form inputs that require validation, and declare a set of rules for which to validate against, and 
         the respective messages to display if the rules are not met.
     
-Pages are XHTML 1.1 & CSS 2.1 strict (CSS 3 styles are used).
-Browser compatibility: IE7+, Chrome, Opera, Safari, Firefox.
+Browser compatibility: IE7+ , Chrome, Opera, Safari, Firefox.
+Pages are XHTML 1.1 & CSS 2.1 strict (CSS 3 styles are used and IE7 quirks).
     
