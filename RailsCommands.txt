@@ -1,0 +1,19 @@
+Terminal Commands:
+// start console
+    script/console
+
+// generates a Users controller
+    script/generate rspec_controller Users new
+// generates a User model
+    script/generate rspec_model User name:string email:string
+// push the model to the development database   (first use creates the dev database, config'd in database.yml)
+    rake db:migrate
+// annotate User model with fields
+    annotate
+// console development log - open in new terminal window to see updates to database
+    tail -f log/development.log
+// update test database to reflect the development database
+    rake db:test:prepare
+// Gravatar plugin Reference: http://en.gravatar.com/
+    script/plugin install svn://rubyforge.org/var/svn/gravatarplugin/plugins/gravatar
+    

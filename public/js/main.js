@@ -139,22 +139,22 @@ $().ready(function() {
         }
     });
     // validate the signup form feilds
-    $("#signup-form").validate({
+    $("#new_user").validate({
         rules: {
-            username: {
+            "user[name]": {
                 required: true,
                 minlength: 5
             },
-            password: {
+            "user[password]": {
                 required: true,
                 minlength: 5
             },
-            password_confirm: {
+            "user[password_confirmation]": {
                 required: true,
                 minlength: 5,
                 equalTo: "#password"
             },
-            email: {
+            "user[email]": {
                 required: true,
                 email: true
             }

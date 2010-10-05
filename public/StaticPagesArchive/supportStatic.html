@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Monkey Talk | Support</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" />
+<link type="text/css" rel="stylesheet" href="stylesheets/signin.css" media="screen" title="no title" />
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="js/jquery-func.js"></script>
+<script type="text/javascript" src="js/signinDropdown.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite-beta.js"></script>
+</head>
+<body id="support">
+<div id="page" class="shell">
+  <!-- Logo + Search + Navigation -->
+  <div id="top">
+    <div class="cl">&nbsp;</div>
+    <h1 id="logo"><a href="index.html">Monkey Talk - Home</a></h1>
+    <!-- Login Signup and Search Navigation -->
+    <div id="topnav_container">
+        <ul id="topnav" class="topnav">
+            <li>
+                <a href="signup.html" class="topnav_links"><span>Sign Up</span></a>
+            </li>
+            <li>
+                <a href="#" class="topnav_links signin"><span>Sign In</span></a>
+            </li>
+            <li class="last">
+                <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
+                    <div>
+                        <input type="submit" class="button button-Index" value="Search" />
+                    </div>
+                    <div class="field-holder-Index">
+                        <input tabindex="3040" type="text" class="field-Index field" id="searchtxt" value="Search" title="Search" />
+                    </div>
+
+                    <div class="cl">&nbsp;</div>
+                </form>
+            </li>
+        </ul>
+        <fieldset id="signin_menu">
+            <form method="post" id="signin" action="">
+                <div>
+                    <label for="username">Username or email</label>
+                    <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
+                </div>
+                <p class="remember">
+                    <input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
+                    <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
+                    <label for="remember">Remember me</label>
+                </p>
+                <div>
+                    <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
+                    <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <!-- END - Login Signup and Search Navigation -->
+    <div class="cl">&nbsp;</div>
+    <div id="navigation">
+      <ul>
+        <li><a href="index.html"><span>Home</span></a></li>
+        <li><a href="signup.html"><span>Sign Up</span></a></li>
+        <li><a href="tour.html"><span>Tour</span></a></li>
+        <li><a href="support.html" class="active"><span>Support</span></a></li>
+        <li><a href="aboutus.html"><span>About Us</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- END Logo + Search + Navigation -->
+  <!-- Header -->
+  <div id="header">
+    <!-- Slider -->
+    <div id="feature">
+      <div>
+        <div class="support-image"> <img src="images/supportImg.png" alt="Reference: http://disneydvd.disney.go.com/monsters-inc.html" /> </div>
+        <div class="support-text">
+            <h2 class="notext txt-need-help">Looking for Support?</h2>
+            <h2>Look no further!</h2>
+        </div>
+      </div>
+    </div>
+    <!-- END Feature -->
+  </div>
+  <!-- END Header -->
+  <!-- Main -->
+  <div id="main">
+    <p>Select the question you need help with below. Please check through the FAQs carefully as your question may already have been answered. If we haven't provided an answer, you may contact us using the form on the right.</p>
+    <!-- Two-Thirds Column Content -->
+    <div class="cols two-thirds-cols">
+      <div class="cl">&nbsp;</div>
+      <div class="col">
+        <h2>Signing Up and Logging In</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">How do I sign-up?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>You can sign up for a MonkeyTalk membership by
+                clicking on the Sign Up tab in the navigation
+                bar. Then simply fill out all the required forms and
+                click the submit button.</p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">My citizenship is
+                not listed in the sign up page!</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>In this case, select the '--Other--' option in
+                the 'Citizenship:' drop down menu. A text field will
+                appear in which you can type in your citizenship. </p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">Why do I have to type
+                in that funny text at the end?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>This is to ensure that you are a human! Online
+                spammers make a habit of writing automated scripts to
+                sign up for as many differents sites as they can. This
+                is one of the ways they spread spam. By typing in the
+                verification text, you are letting us know that you
+                are a human and not some script written by a spammer!</p>
+                </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Joining a Chat Room</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">What is a chat room?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">How do I join a chat room?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">How many chat rooms
+                are there?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Community</h2>
+        <ul class="txt-support">
+          <li>
+            <h3 class="acc_trigger"><a href="#">Someone is being rude
+                in the chat rooms. How do I report them?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">I want to meet some of
+                my friends in person. Can we exchange contact details?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+          <li>
+            <h3 class="acc_trigger"><a href="#">No one will talk to
+                me. How do I make more friends?</a></h3>
+            <div class="acc_container">
+                <div class="block">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+                </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cl">&nbsp;</div>
+    </div>
+    <!-- END Two-Thirds Column Content -->
+    <!-- One-Third Column Content -->
+    <div class="cols one-third-cols">
+      <div id="contact-container" name="contact-container">
+        <h1 class="contact-title">Contact Us:</h1>
+        <div class="contact-content">
+            <form id="contact-form" action="#">
+                <div>
+                    <label for="cname">&#42;Name:</label>
+                    <input id="cname" type="text" name="name" class="contact-input" tabindex="2000" />
+                </div>
+                <div>
+                    <label for="cemail">&#42;Email:</label>
+                    <input id="cemail" type="text" name="email" class="contact-input" tabindex="2010" />
+                </div>
+                <div>
+                    <label for="contact-subject">&nbsp;Subject:</label>
+                    <input id="contact-subject" type="text" value="" name="subject" class="contact-input" tabindex="2020" />
+                </div>
+                <div>
+                    <label for="ccomment">&#42;Message:</label>
+                    <textarea id="ccomment" rows="4" cols="40" name="comment" class="contact-input" tabindex="2030" ></textarea>
+                </div>
+                <div>
+                    <button class="contact-send contact-button" type="submit" tabindex="2040">Send</button>
+                    <button class="contact-cancel contact-button simplemodal-close" type="submit" tabindex="2050" >Cancel</button>
+                </div>
+            </form>
+         </div>
+      </div>
+    </div>
+    <!-- END One-Third Column Content -->
+    <!-- Two Column Content -->
+    <div class="cols two-cols">
+      <div class="cl">&nbsp;</div>
+      <div class="col">
+        <h2>What do you think of MonkeyTalk?</h2>
+        <p>We here at MonkeyTalk are committed to providing a high
+                quality service to our members. This means
+                meeting the demands of our users and constantly
+                refining our service based on user feedback.</p>
+        <p>So if you don't like something, please let us know! If you
+                do like something, let us know as well! Your feedback
+                is invaluable. If we don't know something is broken,
+                we can't fix it!</p>
+        <p><a href="#contact-container" class="more" onclick="feedback();">Leave Feedback</a></p>
+      </div>
+      <div class="col col-last">
+        <h2>Want to make a donation?</h2>
+        <p>MonkeyTalk has always, and will always be a free-to-use
+                service. We do not have any advertising on our site,
+                and rely entirly in donations to continue running.</p>
+        <p>So don't be a mooch and send us your donation, however
+                large. Every dollar helps!</p>
+        <p><a href="javascript:donate()" class="more">Make Donation</a></p>
+      </div>
+      <div class="cl">&nbsp;</div>
+    </div>
+    <!-- END Two Column Content -->
+  </div>
+  <!-- END Main -->
+  <!-- Footer -->
+  <div id="footer">
+    <div id="footer-left">
+        <p>
+            <a href="http://validator.w3.org/check?uri=referer">
+                <img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" />
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check?uri=referer">
+    			<img style="border:0" src="http://www.w3.org/Icons/valid-css2" alt="Valid CSS 2" />
+  			</a>
+        </p>
+    </div>
+    <div id="footer-center">
+        <p>
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="tour.html">Tour</a>
+            <span>|</span>
+            <a href="support.html">Support</a>
+            <span>|</span>
+            <a href="aboutus.html">About Us</a>
+            <span>|</span>
+            <a href="sitemap.html">Site Map</a>
+        </p>
+    </div>
+    <div id="footer-right">
+        <p>&copy; 2010 - CITS4230 Project - Group C &nbsp;</p>
+    </div>
+    <div class="cl">&nbsp;</div>
+  </div>
+  <!-- END Footer -->
+</div>
+</body>
+</html>

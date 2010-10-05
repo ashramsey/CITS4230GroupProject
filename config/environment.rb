@@ -8,6 +8,11 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
+
+  # Create the file spec/factories.rb and define a User factory to arrange for RSpec 
+  # to load our factories automatically whenever the tests run
+  config.gem 'factory_girl'
+  
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
 
