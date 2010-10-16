@@ -17,8 +17,14 @@
         
         <%= render 'layouts/header' %>
         
-          
-        <%= yield %>
+        <div id="content" class="round">
+          <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+          <% end %>
+          <%= yield %>
+        </div>
+        
+        
         
         <%= render 'layouts/footer' %>
         

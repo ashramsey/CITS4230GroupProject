@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101004201830
+# Schema version: 20101016031213
 #
 # Table name: users
 #
@@ -10,6 +10,7 @@
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  remember_token     :string(255)
 #
 
 require 'digest'
@@ -43,6 +44,13 @@ class User < ActiveRecord::Base
         encrypted_password == encrypt(submitted_password)
     end
     
+		# Create a persistent session on signin using adding salt and timestamp to remove security holes.
+		def remember_me!
+		    self.remember_token = encrypt("#{salt}--#{id}--#{Time.now.utc}")
+				# Save the user's remember token to the database
+		    save_without_validation
+		end
+
     def self.authenticate(email, submitted_password)
         user = find_by_email(email)
         return nil  if user.nil?
@@ -52,8 +60,10 @@ class User < ActiveRecord::Base
     # Password encryption - keep private from public interface
     private
         def encrypt_password
-            self.salt = make_salt
-            self.encrypted_password = encrypt(password)
+            unless password.nil?
+						    self.salt = make_salt
+						    self.encrypted_password = encrypt(password)
+						end
         end
         
         # Add salt to the password

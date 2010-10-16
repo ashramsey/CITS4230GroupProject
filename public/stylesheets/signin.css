@@ -133,7 +133,7 @@ a.signin.menu-open span {
 #signin_menu p a {
     color:#27B!important;
 }
-#signin_submit {
+#signin_submit, #session_submit {
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     background:#88bbd4 url('../images/bg-btn-blue.png') repeat-x scroll 0 0;

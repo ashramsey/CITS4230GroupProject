@@ -1,16 +1,19 @@
 <!-- Logo + Search + Navigation -->
       <div id="top">
         <div class="cl">&nbsp;</div>
-        <h1 id="logo"><%= link_to "Home", root_path %></h1>
+        <%= link_to logo, root_path, :id => 'logo' -%>
         <!-- Login Signup and Search Navigation -->
         <div id="topnav_container">
             <ul id="topnav" class="topnav">
-                <li>
-                    <%= link_to "<span>Sign Up</span>", signup_path, :class => 'topnav_links' -%></li>
-                </li>
-                <li>
-                    <a href="#" class="topnav_links signin"><span>Sign In</span></a>
-                </li>
+                
+                <% if signed_in? %>
+                    <li><%= link_to "<span>Profile</span>", current_user , :class => 'topnav_links' -%></li>
+                    <li><%= link_to "Support", support_path, :class => 'topnav_links' -%></li>
+                    <li><%= link_to "Sign out", signout_path, :class => 'topnav_links', :method => :delete %></li>
+                <% else %>
+                    <li><%= link_to "<span>Sign Up</span>", signup_path, :class => 'topnav_links' -%></li>
+                    <li><a href="#" class="topnav_links signin"><span>Sign In</span></a></li>
+                <% end %>
                 <li class="last">
                     <form onsubmit="getsearch()" method="get" id="searchIndex" class="topnav" action="">
                         <div>
@@ -25,25 +28,25 @@
                 </li>
             </ul>
             <fieldset id="signin_menu" class="topnav">
-                <form method="post" id="signin" action="">
-                    <div>
-                        <label for="username">Username or email</label>
-                        <input tabindex="1000" id="username" name="username" value="" title="username" type="text"/>
+                <% form_for(:session, :html => {:id=>'signin'}, :url => sessions_path) do |f| %>
+                    <div class="field">
+                        <%= f.label :email %>
+                        <%= f.text_field :email, :tabindex=>'1000' %>
                     </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input tabindex="1010" id="password" name="password" value="" title="password" type="password"/>
+                    <div class="field">
+                        <%= f.label :password %>
+                        <%= f.password_field :password, :tabindex=>'1010' %>
                     </div>
-                    <p class="remember">
-                        <input tabindex="1020" id="signin_submit" value="Sign in" type="submit"/>
+                    <div class="actions remember">
+                        <%= f.submit "Sign in" %>
                         <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
                         <label for="remember">Remember me</label>
-                    </p>
+                    </div>
                     <div>
                         <a href="#" id="resend_password_link" class="forgot">Forgot your password?</a> <br/><br/>
                         <a id="forgot_username_link_title" href="#" class="forgot-username">Forgot your username?</a> 
                     </div>
-                </form>
+                <% end %>
             </fieldset>
         </div>
         <!-- END - Login Signup and Search Navigation -->

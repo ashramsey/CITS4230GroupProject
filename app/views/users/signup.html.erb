@@ -5,13 +5,15 @@
     <div class="top">
         <h2>Make me a Monkey!!!</h2><br />
         <h4>Please fill in all fields</h4>
-        <%= f.error_messages %>
+        <div class="errorExplanation" id="errorExplanation">
+          <%= f.error_messages %>
+        </div>
     </div>
     <div class="main-col">
         <h2>Personal Details</h2>
         <div class="userin">
             <%= f.label :name %><br />
-            <%= f.text_field :name, :id => 'usernam', :size => '25'  %>
+            <%= f.text_field :name, :id => 'username', :size => '25'  %>
         </div>
         <div class="userin">
             <%= f.label :email %><br />
@@ -19,7 +21,7 @@
         </div>
         <div class="userin">
             <%= f.label :password %><br />
-            <%= f.password_field :password, :id => 'pasword', :size => '25' %>
+            <%= f.password_field :password, :id => 'password', :size => '25' %>
         </div>
         <div class="userin">
             <%= f.label :password_confirmation %><br />

@@ -25,8 +25,8 @@ body {
     background-color:#E6E2D9;
 }
 input, textarea, select { font-family: "Georgia", Tahoma, Sans-Serif; font-size:12px; }
-.field { padding: 4px 5px; border: solid 1px #e7e7e7; color: #969696; height: 15px; }
-.field-focused { color: #333; }
+.field { padding: 4px 5px; border: none; color: #969696; height: 15px; }
+.field-focused { color: #555; display:inline;}
 input.button { padding: 4px 5px; cursor: pointer; }
 
 a { color: #45c7ee; text-decoration: underline; cursor: pointer; }
