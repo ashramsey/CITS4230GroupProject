@@ -1,0 +1,6 @@
+TODO
+
+Write tests to check for the presence of each field on the signup form (Chapter 8.6)
+Style rails error messages on sign up form
+Style users/show, login menu, top navs when signed in, server error messages for login
+javascript:login form 
