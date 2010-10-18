@@ -1,0 +1,9 @@
+Chapter 6
+// Create and save a model instance in one step
+    >> User.create(:name => "A Nother", :email => "another@example.org")
+// Destroy a model instance from the db
+    >> foo = User.find_by_email("another@example.org")
+    >> foo.destroy
+// Update a record using a hash of attributes
+    >> user.update_attributes(:name => "The Dude", :email => "dude@abides.org")
+    

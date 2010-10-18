@@ -38,6 +38,7 @@
                         <%= f.password_field :password, :tabindex=>'1010' %>
                     </div>
                     <div class="actions remember">
+                        <%= flash[:error] %>
                         <%= f.submit "Sign in" %>
                         <input tabindex="1030" id="remember" name="remember_me" value="1" type="checkbox"/>
                         <label for="remember">Remember me</label>
