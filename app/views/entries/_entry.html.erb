@@ -1,0 +1,17 @@
+<%= error_messages_for 'entry' %>
+
+<h1>Post Message</h1>
+<table>
+	<tr>
+	    <%= label 'entry', 'chatroom_id' %><br />
+	    <%= text_field 'entry', 'chatroom_id' %>
+	</tr>
+	<tr>
+	    <%= label 'entry', 'user_id' %><br />
+	    <%= text_field 'entry', 'user_id' %>
+	</tr>
+	<tr>
+	    <%= label 'entry', 'message' %><br />
+	    <%= text_area 'entry', 'message' %>
+	</tr>
+</table>
