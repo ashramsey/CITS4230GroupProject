@@ -1,0 +1,15 @@
+<h1>Chatrooms Lists</h1>
+<br/>
+<ul>
+  <% for chatroom in @chatroom %>
+   <li>
+      <%= link_to chatroom.name, :controller => 'users', :action => 'signup', :chatroom_id => chatroom.id %>
+   </li>
+  <% end %>
+</ul>
+<br/>
+<ul>
+  <li><%= link_to 'Create Chatroom', :action => 'new' %></li>
+</ul>
+
+

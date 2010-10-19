@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :entries
-
+  map.resources :chatrooms
   # The priority is based upon order of creation: first created -> highest priority.
 		#adding users as a resource
   	map.resources :users
