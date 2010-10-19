@@ -1,0 +1,18 @@
+<p>
+  <b>Chatroom:</b>
+  <%=h @entry.chatroom_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @entry.user_id %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%=h @entry.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

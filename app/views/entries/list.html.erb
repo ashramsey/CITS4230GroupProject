@@ -1,0 +1,10 @@
+<h1>Listing all messages</h1>
+<table id="entry_list">
+<% @entries.each do |c| %>
+<tr>
+	<td><%= link_to c.chatroom_id, :action => 'show', :id => c.id %></td>
+	<td><%= link_to c.user_id, :action => 'show', :id => c.id %></td>
+	<td><%= link_to c.message, :action => 'show', :id => c.id %></td>
+</tr>
+<% end %>
+</table>
