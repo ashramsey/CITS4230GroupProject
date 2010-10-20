@@ -1,15 +1,18 @@
 <h1>Chatrooms Lists</h1>
 <br/>
+ <h2>Join an Existing Chatroom</h2>
 <ul>
-  <% for chatroom in @chatroom %>
+  <% for @chatroom in @chatrooms %>
    <li>
-      <%= link_to chatroom.name, :controller => 'users', :action => 'signup', :chatroom_id => chatroom.id %>
+      <%= link_to @chatroom.name, @chatroom %>
    </li>
   <% end %>
 </ul>
 <br/>
-<ul>
-  <li><%= link_to 'Create Chatroom', :action => 'new' %></li>
-</ul>
+<h2>Start a new Chatroom</h2>
+  <%= render :partial => 'form' %>
 
+<% $end %>
+<br/>
+<%= link_to 'Back', :action => 'index' %>
 

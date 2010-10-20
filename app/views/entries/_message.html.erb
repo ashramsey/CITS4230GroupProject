@@ -1,9 +1,11 @@
-<table>
-<% Entry.all.each do |c| %>
-<tr>
-	<td><%= link_to c.chatroom_id, :action => 'show', :id => c.id %></td>
-	<td><%= link_to c.user_id, :action => 'show', :id => c.id %></td>
-	<td><%= link_to c.message, :action => 'show', :id => c.id %></td>
-</tr>
-<% end %>
-</table>
+<div class="message">
+	<% Entry.all.each do |c| %>
+		<div class="name">
+			<%= link_to c.chatroom_id, :action => 'show', :id => c.id %>
+			<%= link_to c.user_id, :action => 'show', :id => c.id %>
+		</div>
+		<div class="messagetext">
+			<p><%= link_to c.message, :action => 'show', :id => c.id %></p>
+		</div>
+	<% end %>
+</div>

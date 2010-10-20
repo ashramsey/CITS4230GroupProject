@@ -10,12 +10,14 @@ class UsersController < ApplicationController
     end
   
     def create
+			@chatrooms = Chatroom.all
+      @chatroom = Chatroom.new
         @user = User.new(params[:user])
         if @user.save
 						sign_in @user
             # Handle a successful save
             flash[:success] = "Welcome to the Sample App!"
-            redirect_to @user
+            redirect_to :controller => 'chatrooms', :action =>  'index'
         else
             @title = "Sign Up"
             render 'signup'

@@ -10,8 +10,13 @@
 #
 
 class Chatroom < ActiveRecord::Base
+		has_many :memberships
+  	has_many :users, :through => :memberships
    
-   attr_accessible :name
-   
-   validates_presence_of :name
+   	attr_accessible :name
+   	validates_presence_of :name
+		
+		def entries
+    		Entry.scoped(:joins => {:user => :memberships}, :conditions => { :memberships => { :chatroom_id => id } })
+  	end
 end

@@ -1,18 +1,19 @@
 
 <div id="entry_list">
-	
+
 	<div id="update_list">
-	<%= render :partial => "message" %>
+	<%= render :partial => "entries/message" %>
 	<% @entry = Entry.new %>
 	<%= periodically_call_remote(
 	   :update => "update_list",
-	   :frequency => 2 , 
+	   :frequency => 2 ,
 	   :url => { :action => 'relist' } ) %>
 	</div>
 
-<%= form_remote_tag (:url => { :action => 'create' } , :update => 'entry_list' ) %>
-	<%= render :partial => "entry" %>
+	<%= form_remote_tag(:url => { :action => 'create' } , :update => 'entry_list' ) %>
+	<%= render :partial => "entries/entry" %>
 	<%= submit_tag 'comment' %>
-<% $end %>
-<%= link_to 'Back', entries_path %>
+	<% $end %>
+	<%= link_to 'Back', entries_path %>
 </div>
+

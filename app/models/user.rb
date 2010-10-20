@@ -16,6 +16,9 @@
 require 'digest'
 
 class User < ActiveRecord::Base
+		has_many :memberships
+  	has_many :chatrooms, :through => :memberships
+  	has_many :entries, :dependent => :destroy
     # Create a virtual password attribute (not ever be written to the database, used to perform password confirmation
     # and encryption)
     attr_accessor :password

@@ -1,10 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :entries
-  map.resources :chatrooms
+    map.resources :entries
+    map.resources :chatrooms
   # The priority is based upon order of creation: first created -> highest priority.
 		#adding users as a resource
   	map.resources :users
 		map.resources :sessions, :only => [:new, :create, :destroy]
+
+    #map.resources :chatrooms
 		
 		map.signin  '/signin',  :controller => 'sessions', :action => 'new'
 		map.signout '/signout', :controller => 'sessions', :action => 'destroy'

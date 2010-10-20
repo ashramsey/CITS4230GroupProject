@@ -1,2 +1,10 @@
-<p><label for="chatroom_name">Name</label><br/>
-<%= text_field 'chatroom', 'name' %></p>
+<% form_for :chatroom, @chatroom, :url => {:action => "create" }, :html => {:class => "test"} do |f| %>
+  <%= f.error_messages %>
+  
+  <p>
+    <%= f.label :name, 'Chatroom Name:' %><br />
+    <%= f.text_field :name %>
+    
+  </p>
+  <p><%= f.submit "Create Chatroom" %></p>
+<% end %>
