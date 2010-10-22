@@ -208,3 +208,24 @@ $().ready(function() {
 });
 /* -------------------------------------------- END - Form Validation ---------------------------------------*/
 
+/* -------------------------------------------- START - Chatrooms -------------------------------------------*/
+function scrollToBottom() {
+    var scrolling = 0;
+    function toggleScroll()
+    {
+      if(scrolling == 0) scrolling = 1;
+      else scrolling = 0;
+    }
+    function toBottom()
+    {
+        ignoreScrollEvents = false;
+        //alert("scrollHeight:"+objDiv.scrollHeight);
+        var objDiv = document.getElementById("scrolltext");
+
+        //objDiv.onclick = function() {alert("onscroll")};
+	if(scrolling == 0)objDiv.scrollTop = objDiv.scrollHeight;
+        //alert("scrollTop:"+objDiv.scrollTop);
+    }
+    setInterval("toBottom()",6);
+}
+    /* -------------------------------------------- START - Chatrooms -------------------------------------------*/

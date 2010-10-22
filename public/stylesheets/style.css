@@ -25,8 +25,8 @@ body {
     background-color:#E6E2D9;
 }
 input, textarea, select { font-family: "Georgia", Tahoma, Sans-Serif; font-size:12px; }
-.field { padding: 4px 5px; border: none; color: #969696; height: 15px; }
-.field-focused { color: #555; display:inline;}
+.field { padding: 4px 5px; border: solid 1px #e7e7e7; color: #969696; height: 15px; }
+.field-focused { color: #333; }
 input.button { padding: 4px 5px; cursor: pointer; }
 
 a { color: #45c7ee; text-decoration: underline; cursor: pointer; }
@@ -173,7 +173,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
         .list a:hover           { background-color:#55E1BB; } /* CCFFCC; } */
         /*---------------------------Two-Third Container End-------------------------------*/
         /*---------------------------------Two cols Start----------------------------------*/
-        .colFrame               { display:block !important;  background: url("../images/members_bg.png") repeat scroll 0 0 #00CC66; padding:20px; min-height:250px; width:335px; margin:0 auto; }
+        .colFrame               { display:block !important; background: url("../images/members_bg1.png") repeat; padding:20px; min-height:250px; width:335px; margin:0 auto;}
         .colFrame               { -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow:0 5px 20px rgba(0, 0, 0, 0.75); -webkit-border-radius: 10px 10px 10px 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px;}
         .colFrame h2.headText   { border-bottom:1px #999999 solid; padding-bottom:5px; font-weight:bold; color:#666666; }
         .colFrame ul            { list-style:none outside none; margin:10px -10px 10px 0; padding:0; }
@@ -270,5 +270,109 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
         .userin     { margin-top: 20px }
 
 /***************************** SIGNUP PAGE END ************************************/
+
+/***************************** CHATROOM PAGE START ************************************/
+		.chatbox {
+			margin-left:120px; 
+			width:750px; 
+			height:650px;
+		}
+		
+		.winwrap {
+			float:left;
+		}
+		
+		.chatwindow {
+			width:400px; 
+			height:500px; 
+			overflow:auto; 
+			background:white;
+		}
+		
+		.message {
+			padding-left:10px;
+		}
+		
+		.typewin {
+			margin-top:25px; 
+			height:4em; 
+			width:33em;
+		}
+		
+		.newwrap {
+			float:right;
+		}
+		
+		.filelist {
+			background:white; 
+			width:150px; 
+			height:575px; 
+			overflow:auto;
+		}
+		
+		.othrwrap {
+			float:center; 
+			margin-left:395px;
+		}
+		
+		.userlist {
+			background:white; 
+			width:150px; 
+			height:575px; 
+			overflow:auto; 
+			margin-left:30px;		
+			}
+
+
+/***************************** CHATROOM PAGE END ************************************/
+
+/***************************** LOBBY PAGE START ************************************/
+		.lobbybox {
+			margin-left:120px; 
+			width:700px; 
+			height:500px
+		}
+		
+		.roommenu{
+			float:left; 
+			width:430px; 
+			height:450px
+		}
+		
+		.roomdiv {
+			width:410px;
+			height:410px; 
+			overflow:auto; 
+			background:white; 
+			margin:10px
+		}
+
+                .user {
+                        display: block;
+                }
+
+		.lobbyroom, .username, .upfile {
+			display: inline;
+                        padding-left: 10px;
+                        vertical-align: 20px;
+		}
+		
+		.newmenu {
+			float:right; 
+			width:180px; 
+			height:450px	
+		}
+
+		.loblabel{
+			color:#464646
+		}
+		
+		.lobbydesc{
+			height:13em; 
+			width:14em
+		}
+
+/***************************** LOBBY PAGE END ************************************/
+
 
 

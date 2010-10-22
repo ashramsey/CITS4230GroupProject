@@ -18,4 +18,8 @@ class Entry < ActiveRecord::Base
 
   validates_presence_of :message, :user_id
   validates_length_of   :message, :maximum => 140
+
+  def user
+    User.scoped(:all, :conditions => { :user_id => :id } )
+  end
 end

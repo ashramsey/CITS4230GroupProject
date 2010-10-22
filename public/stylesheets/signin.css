@@ -4,7 +4,7 @@
     margin:0 auto;
 	padding:0 20px;
     position: relative;
-	width:400px;
+	width:350px;
 }
 
 #content {
@@ -23,10 +23,11 @@ a img {
 }
 #topnav {
 	display:inline-block;
-	margin-right:4px;
-    padding:0;
+	margin-right:0px;
+    padding-right:0px;
     font-size:13px;
-    width:400px;
+    width:470px;
+	float:right;
 }
 .topnav { zoom: 1; *display: inline; } /* IE7 compatibility  */
 #topnav li { float: left; display: inline; list-style-type: none; margin-right:2px; width:78px; }
@@ -98,8 +99,8 @@ a.signin.menu-open span {
     border:1px transparent;
     text-align:left;
     padding:12px;
-    top: 30px; 
-    margin-left: 80px;
+    top: 30px;
+    margin-left: 0px;
     color:#789;
     font-size:11px;
 }

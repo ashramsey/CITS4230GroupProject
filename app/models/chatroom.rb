@@ -15,8 +15,13 @@ class Chatroom < ActiveRecord::Base
    
    	attr_accessible :name
    	validates_presence_of :name
+
+    def users
+        User.scoped(:joins => :entries, :select => "users.*, count(entries.id) as entries_count", :group => "users.id")
+    end
 		
 		def entries
+        # Get all the entries where the user's id matches the chatroom's id in the membership table
     		Entry.scoped(:joins => {:user => :memberships}, :conditions => { :memberships => { :chatroom_id => id } })
   	end
 end
