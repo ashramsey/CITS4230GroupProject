@@ -1,0 +1,21 @@
+# == Schema Information
+# Schema version: 20101019061558
+#
+# Table name: memberships
+#
+#  id          :integer         not null, primary key
+#  user_id     :integer
+#  chatroom_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  chatroom_id: 1
+
+two:
+  user_id: 1
+  chatroom_id: 1

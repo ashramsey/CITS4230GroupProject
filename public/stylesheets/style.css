@@ -292,6 +292,18 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 		.message {
 			padding-left:10px;
 		}
+
+                .message li {
+                    clear:both;
+                    display:block;
+                    height:auto;
+                    min-height:15px;
+                    width:auto;
+                }
+                .edit_entry textarea {
+                    width:400px;
+                    height:30px;
+                }
 		
 		.typewin {
 			margin-top:25px; 
@@ -311,7 +323,6 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 		}
 		
 		.othrwrap {
-			float:center; 
 			margin-left:395px;
 		}
 		

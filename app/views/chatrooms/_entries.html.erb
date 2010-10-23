@@ -1,0 +1,5 @@
+<% for @entry in @entries %>
+  <li><%=  @entry.user_name %></li>
+  <li><%= link_to h(@entry.message), entry_path(@entry) %></li>
+  <li id="created_at" style="display: none"><%=  @entry.created_at %></li>
+<% end %>

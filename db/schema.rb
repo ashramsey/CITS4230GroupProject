@@ -19,7 +19,9 @@ ActiveRecord::Schema.define(:version => 20101019061558) do
 
   create_table "entries", :force => true do |t|
     t.integer  "chatroom_id"
+    t.string   "chatroom_name"
     t.integer  "user_id"
+    t.string   "user_name"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -27,7 +29,9 @@ ActiveRecord::Schema.define(:version => 20101019061558) do
 
   create_table "memberships", :force => true do |t|
     t.integer  "user_id"
+    t.string   "user_name"
     t.integer  "chatroom_id"
+    t.string   "chatroom_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

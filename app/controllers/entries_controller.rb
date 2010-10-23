@@ -76,12 +76,26 @@ class EntriesController < ApplicationController
     @entry = Entry.new(params[:entry])
     @entry.chatroom_id= params[:entry]['chatroom_id']
     @entry.user_id = current_user.id
-    #@entry.chatroom_id = params[@entry.chatroom_id]
-
-
+    @chatroom 	= Chatroom.find(@entry.chatroom_id)
+    @entry.chatroom_name = @chatroom.name
+    @user = current_user
+    @entry.user_name = @user.name
+    @users = User.all(:joins => :entries, :select => "users.*, count(entries.id) as entries_count", :group => "users.id")
     if @entry.save
-        render 'chatrooms/show', :object => @entry
-       #render :partial => "list", :object => @entry
+       respond_to do |format|
+          format.html do # index.html.erb
+            @entries = @chatroom.entries #Entry.find(:all, :conditions => ['user_id = ? AND chatroom_id = ?', current_user.id, @chatroom.id])
+            redirect_to @chatroom
+          end
+          format.js  do
+          render :json => { :message => @entry.message,
+                            :user_name => @user.name,
+                            :created_at => @entry.created_at}.to_json
+
+        end
+       end
+    else
+      redirect_to :controller => 'chatrooms', :action => 'show'
     end
   end
 

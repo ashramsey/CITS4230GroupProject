@@ -214,19 +214,6 @@ $(document).ready(function() {
 
 /* -------------------------------------------- START - Chatrooms -------------------------------------------*/
 
-$(document).ready(function (){  
-    $('#new_post').submit(function (){
-    $.post($(this).attr('action'), $(this).serialize(), null, "script");  
-    return false;  
-    });  
-});
-
-$(document).ready(function(){
-    $('#scrolltext').each(function() {
-        this.scrollTop = this.scrollHeight;
-    });   
-});
-
 function scrollToBottom()
 {
     $('#scrolltext').each(function() {
@@ -234,67 +221,116 @@ function scrollToBottom()
     });
 }
 
-
+// AJAX call to display new message from current_user
 $(document).ready(function() {
+    scrollToBottom();
+    $('#comment_form input[type="text"], textarea').focus();
+    post_message();
+    $('#message_field').keypress(function(e){
+        if(e.which == 13){
+            e.preventDefault();
+            $('#comment_form').submit();
+        }
+    });
+ });
+
+function post_message()
+{
     $('#comment_form').submit(function(event) {
         event.preventDefault();
         var f = $(this);
-        f.find('.ajax_message').html('Saving...');
-        var $data = f.serialize();//{message : 'hello' }//f.serialize(true).toJSON();
-        //$data = $data.toJSON();
-        //f.find('input[type="submit"]').attr('disabled', true);
-        //$.post($(this).attr('action'), $(this).serialize(), function(data){
-     //alert("Data Loaded: " + data);}, "script");
+        f.find('.ajax_message').html('Sending...');
+        f.find('input[type="submit"]').attr('disabled', true);
         $.ajax({
-            url:      f.attr('action'), //'/chatrooms/update_view',
+            url:      '/entries/create',
             type:     f.attr('method'),
             dataType: 'json',
-            data:     $data,
+            data:     f.serialize(),
             complete: function() {
                 f.find('.ajax_message').html('&nbsp;');
                 f.find('input[type="submit"]').attr('disabled', false);
             },
             success:  function(data, textStatus, xhr) {
-                $('#comments').append(data);
+                $('.message').append('<li>'+ data.user_name + '</li>' +
+                                      '<li>'+ data.message + '</li>' +
+                                  '<li id="created_at" style="display: none">'+ data.created_at + '</li>');
                 f.find('input[type="text"], textarea').val('');
+                f.find('input[type="text"], textarea').focus();
+                scrollToBottom();
             },
             error:    function() {
                 alert('Please enter a comment.');
             }
         });
+
     });
- });
+}
 
-/*!
- * jQuery serializeObject - v0.2 - 1/20/2010
- * http://benalman.com/projects/jquery-misc-plugins/
- *
- * Copyright (c) 2010 "Cowboy" Ben Alman
- * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
- */
+// AJAX call to poll server for new messages
+function poll_server_for_new_messages() {
+        var id = $('.message').attr('id');
+        var last_update = $('.message #created_at:last-child').html();
+        //alert(last_update);
+         $.ajax({
+                url:      '/chatrooms/' + id,
+                type:     'GET',
+                dataType: 'json',
+                data:       {id:id, last_update:last_update},
+                success:  function(data, textStatus, xhr) {
+                    var entries = data.entries;
+                    if(data.entries.length>0) {
+                        $.each(data.entries, function(key, value){
+                        var user_name;
+                        var message;
+                        var date;
+                        $.each(value.entry, function(key,value){
+                            switch(key){
+                                case 'user_name':
+                                    user_name = value;
+                                    break;
+                                case 'message':
+                                    message = value;
+                                    break;
+                                case 'created_at':
+                                    date = value;
+                                    break
+                            }
+                        })
+                        $('.message').append('<li>'+ user_name + '</li>' +
+                                         '<li>'+ message + '</li>' +
+                                         '<li id="created_at" style="display: none">'+ date + '</li>');
+                    })
+                    
+                    scrollToBottom();
+                    }
+                    if(data.users.length>0) {
+                        $('.userlist').replaceWith('<div class="userlist"></div>');
+                        $.each(data.users, function(key, value){
+                             var user_name;
+                             var user_id;
+                             $.each(value.user, function(key,value){
+                                switch(key){
+                                case 'name':
+                                    user_name = value;
+                                    break;
+                                
+                                case 'id':
+                                    user_id = value;
+                                    break;
+                                }
+                             })
+                             //Refresh list of other monkeys
+                             $('.userlist').append('<a href="/users/' + user_id +'" class="username">'+ user_name + '</a>');
+                        })
 
-// Whereas .serializeArray() serializes a form into an array, .serializeObject()
-// serializes a form into an (arguably more useful) object.
+                    }
 
-(function($,undefined){
-  '$:nomunge'; // Used by YUI compressor.
-
-  $.fn.serializeObject = function(){
-    var obj = {};
-
-    $.each( this.serializeArray(), function(i,o){
-      var n = o.name,
-        v = o.value;
-
-        obj[n] = obj[n] === undefined ? v
-          : $.isArray( obj[n] ) ? obj[n].concat( v )
-          : [ obj[n], v ];
-    });
-
-    return obj;
-  };
-
-})(jQuery);
+                },
+                error:    function() {
+                    //alert('Error updating chats');
+            }
+        })
+};
+var holdTheInterval = setInterval(poll_server_for_new_messages, 5000);
 
 /* -------------------------------------------- END - Chatrooms -------------------------------------------*/

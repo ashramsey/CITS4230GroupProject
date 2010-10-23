@@ -1,0 +1,85 @@
+<div id="main">
+
+  <div class="top">
+    <h2>TalkTime!</h2>
+  </div>
+
+  <!--START CHATBOX-->
+  <div class="colFrame chatbox">
+
+    <div class="winwrap">
+      <h2>Chatroom Title</h2>
+      <div class="chatwindow">
+        <div id="entry_list">
+
+          <div id="update_list">
+            <%= render :partial => "entries/message" %>
+            <% @entry = Entry.new %>
+
+            <%= periodically_call_remote(
+              :update => "update_list",
+              :frequency => 2 ,
+              :url => { :action => 'relist' } ) %>
+          </div>
+        </div>
+      </div>
+      <!--textfield-->
+      <div id="entry_list">
+
+
+
+        <% form_remote_for(@entry, :url => {  :action => 'update_view' },
+                                              :update => 'entry_list') do |f| %>
+        <%= f.error_messages %>
+
+        <h1>Post Message</h1>
+        <table>
+          <tr>
+          <%= f.label :message %><br />
+          <%= f.text_area :message %>
+          <%= f.hidden_field :chatroom_id, :value=>@chatroom.id %>
+          </tr>
+        </table>
+        <%= f.submit 'comment' %>
+        <% end %>
+
+
+      </div>
+      <%= link_to 'Back', entries_path %>
+    </div><!--end of winwrap-->
+
+    <div class="newwrap">
+      <h2>Uploaded Files</h2>
+      <div class="filelist">
+
+        <div class="upfile">
+          <div class="filename">
+            <a href="">Some file</a>
+          </div>
+          <div class="filedesc">
+            <p>asldfjsaldjfadlsjfklsadjf</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="othrwrap">
+      <h2>&nbsp;&nbsp;&nbsp;&nbsp;Other Monkeys</h2>
+      <div class="userlist" >
+        <div class="username"><a href="" target="_blank">Some Guy1</a></div>
+        
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <!--END CHATBOX-->
+
+
+
+
+</div>

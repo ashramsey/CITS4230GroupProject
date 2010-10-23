@@ -13,7 +13,7 @@ class Chatroom < ActiveRecord::Base
 		has_many :memberships
   	has_many :users, :through => :memberships
    
-   	attr_accessible :name
+   	attr_accessible :name, :chatroom_id
    	validates_presence_of :name
 
     def users
@@ -22,6 +22,6 @@ class Chatroom < ActiveRecord::Base
 		
 		def entries
         # Get all the entries where the user's id matches the chatroom's id in the membership table
-    		Entry.scoped(:joins => {:user => :memberships}, :conditions => { :memberships => { :chatroom_id => id } })
+    		Entry.all(:joins => {:user => :memberships}, :conditions => { :memberships => { :chatroom_id => id } })
   	end
 end
