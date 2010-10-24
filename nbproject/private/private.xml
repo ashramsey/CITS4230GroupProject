@@ -10,4 +10,14 @@
             <line>44</line>
         </file>
     </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/Users/ashramsey/Desktop/rails191010/db/schema.rb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/views/layouts/application.html.erb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/views/chatrooms/index.html.erb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/views/chatrooms/show.html.erb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/views/chatrooms/_entries.html.erb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/controllers/chatrooms_controller.rb</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/public/javascripts/application.js</file>
+        <file>file:/Users/ashramsey/Desktop/rails191010/app/controllers/entries_controller.rb</file>
+    </open-files>
 </project-private>

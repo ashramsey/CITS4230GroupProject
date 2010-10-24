@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
 		has_many :memberships
   	has_many :chatrooms, :through => :memberships
   	has_many :entries, :dependent => :destroy
+    has_attached_file :avatar, :styles => { :small => "150x150>" },
+                      :url => "/assets/users/:id/:style/:basename.:extension",
+                      :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension",
+                      :default_url => "/images/defaultAvatar.jpg"
     # Create a virtual password attribute (not ever be written to the database, used to perform password confirmation
     # and encryption)
     attr_accessor :password
@@ -38,6 +42,11 @@ class User < ActiveRecord::Base
     validates_confirmation_of :password, :on => :create, :message => "should match confirmation"
     validates_presence_of :password, :on => :create, :message => "can't be blank"
     validates_length_of :password, :within => 6..40, :on => :create, :message => "must be present"
+
+    # Validate avatar photo upload
+    #validates_attachment_presence :avatar
+    validates_attachment_size :avatar, :less_than => 5.megabytes
+    validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png']
 
     before_save :encrypt_password
     

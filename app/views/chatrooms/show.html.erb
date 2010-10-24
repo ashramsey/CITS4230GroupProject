@@ -54,22 +54,6 @@
         </div>
 
       </div>
-      <% form_for(@file, :url => {  :controller => 'entries', :action => 'create' },
-                          :html => {:id => 'comment_form', :method=>'POST',:controller => 'chatrooms', :action => 'update' }
-      ) do |f| %>
-        <%= f.error_messages %>
-
-        <h1>Post Message</h1>
-        <table>
-          <tr>
-          <%= f.label :message %><br />
-          <%= f.text_area :message, :id =>'message_field', :size => "62x1", :value=>'' %>
-          <%= f.hidden_field :chatroom_id, :value=>@chatroom.id %>
-          </tr>
-        </table>
-        <%= f.submit 'comment', :id =>'message_submit' %>
-        <span class="ajax_message">&nbsp;</span>
-      <% end %>
     </div>
 
     <div class="othrwrap">

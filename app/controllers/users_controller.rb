@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 			@chatrooms = Chatroom.all
       @chatroom = Chatroom.new
         @user = User.new(params[:user])
+        #@user.avatar_file_name = params[:user]['photo']
         if @user.save
 						sign_in @user
             # Handle a successful save

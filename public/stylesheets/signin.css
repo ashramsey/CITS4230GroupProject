@@ -4,12 +4,12 @@
     margin:0 auto;
 	padding:0 20px;
     position: relative;
-	width:350px;
+	width:500px;
 }
 
 #content {
     width:520px;
-    min-height:500px;
+    min-height:300px;
 }
 a:link, a:visited {
     color:#27b;
@@ -26,7 +26,7 @@ a img {
 	margin-right:0px;
     padding-right:0px;
     font-size:13px;
-    width:470px;
+    
 	float:right;
 }
 .topnav { zoom: 1; *display: inline; } /* IE7 compatibility  */
@@ -100,7 +100,7 @@ a.signin.menu-open span {
     text-align:left;
     padding:12px;
     top: 30px;
-    margin-left: 0px;
+    margin-left: 190px;
     color:#789;
     font-size:11px;
 }

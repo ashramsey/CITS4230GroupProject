@@ -1,2 +1,61 @@
-<h1>Pages#siteMap</h1>
-<p>Find me in app/views/pages/siteMap.html.erb</p>
+  <!-- Section Header -->
+  <section id="header">
+    <!-- Slider -->
+    <!-- END Slider -->
+  </section>
+  <!-- END Section Header -->
+  
+  <!-- Main Section -->
+  <section id="main">
+    <!-- Three Column Content -->
+    <article class="cols three-cols">
+      <span class="cl">&nbsp;</span>
+      
+      <!--Site map Article-->
+      <article class="col">
+        <h2>Site Map</h2>
+        <h3 class="notext txt-monday-again"></h3>
+      	<p><br/></p>
+      	<h2>Home</h2>
+      	<p><%= link_to "<span>Home</span>", root_path  %></p>
+      	<p><br/></p>
+      	<h2>Sign up</h2>
+      	<p>
+      		<%= link_to "<span>Login as member</span>", root_path  %>
+      		&nbsp;&nbsp;&nbsp;
+      		<%= link_to "<span>Sign up new account</span>", signup_path %>      		
+  		</p>
+      	<p><br/></p>
+      	<h2>Tour</h2>
+      	<p><%= link_to "<span>Learn how to use</span>", tour_path %></p>
+      	<p><br/></p>
+      	<h2>Support</h2>
+      	<p><%= link_to "<span>Got questions?</span>", support_path %></p>
+	<p><%= link_to "<span>Leave Feedback</span>", support_path %></p>
+	<p><%= link_to "<span>Make Donations</span>", support_path %></p>
+      	<p><br/></p>
+      	<h2>About us</h2>
+      	<p><%= link_to "<span>Who are we?</span>", aboutus_path %></p>
+      	<p><br/></p>
+	<!--Site Map Article End-->           	
+      </article>
+      
+      <article class="col">
+        <h2></h2>
+        <h3 class="notext"></h3>
+        <p></p>
+        <p></p>
+      </article>
+      
+      <article class="col col-last">
+        <h2></h2>
+        <h3 class="notext"></h3>
+        <p></p>
+        <p></p>
+      </article>
+      
+      <span class="cl">&nbsp;</span>
+    </article>
+    <!-- END Three Column Content -->
+  </section>
+  <!-- END Main Section-->

@@ -25,9 +25,11 @@ function chatRoomGen (){
 }
 
 function chatRoomDisplay(){
-    var num = chatRoomGen();
-    newid = "chatRoomsList"+num;
-    document.getElementById(newid).style.display = "block";
+    if (document.title == "Monkey Talk | Home"){
+        var num = chatRoomGen();
+        newid = "chatRoomsList"+num;
+        document.getElementById(newid).style.display = "block";
+    }
 }
 /* -------------------------------------------- END - Index.html - Top Room List -------------------------*/
 
@@ -69,7 +71,7 @@ function myfunc()
 /* -------------------------------------------- END - AboutUs.html -  -------------------------*/
 
 /* -------------------------------------------- START - Support Page - Topics Slider -------------------------*/
-$(document).ready(function() {
+function accordian() {
     //Set default open/close settings
     $('.acc_container').hide(); //Hide/close all containers
     $('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
@@ -82,7 +84,7 @@ $(document).ready(function() {
         }
         return false; //Prevent the browser jump to the link anchor
     });
-});
+}
 /* -------------------------------------------- END - Support Page - Topics Slider -------------------------*/
 
 /* -------------------------------------------- START - Support Page -------------------------*/
@@ -117,16 +119,16 @@ function hideOtherRes() {
 
 
 /* -------------------------------------------- START - Form Validation ---------------------------------------*/
-$(document).ready(function() {
+function validate_forms() {
     // Uses the jQuery validation plug-in 1.7 - (refer to for reference)
     // validate the login form feilds
     $("#signin").validate({
         rules: {
-            username: {
+            'session[email]': {
                 required: true,
                 minlength: 5
             },
-            password: {
+            'session[password]': {
                 required: true,
                 minlength: 5
             }
@@ -209,7 +211,7 @@ $(document).ready(function() {
         }
     });
 
-});
+}
 /* -------------------------------------------- END - Form Validation ---------------------------------------*/
 
 /* -------------------------------------------- START - Chatrooms -------------------------------------------*/
@@ -222,17 +224,17 @@ function scrollToBottom()
 }
 
 // AJAX call to display new message from current_user
-$(document).ready(function() {
-    scrollToBottom();
-    $('#comment_form input[type="text"], textarea').focus();
-    post_message();
+function post_on_enter() {
+    //scrollToBottom();
+    //$('#comment_form input[type="text"], textarea').focus();
+    //post_message();
     $('#message_field').keypress(function(e){
         if(e.which == 13){
             e.preventDefault();
             $('#comment_form').submit();
         }
     });
- });
+ }
 
 function post_message()
 {
@@ -308,6 +310,7 @@ function poll_server_for_new_messages() {
                         $.each(data.users, function(key, value){
                              var user_name;
                              var user_id;
+                             var avatar_path = 'defaultAvatar.jpg';
                              $.each(value.user, function(key,value){
                                 switch(key){
                                 case 'name':
@@ -317,10 +320,16 @@ function poll_server_for_new_messages() {
                                 case 'id':
                                     user_id = value;
                                     break;
+
+                                case 'avatar_file_name':
+                                    if(value!=null)
+                                        avatar_path = value;
+                                    break;
                                 }
                              })
                              //Refresh list of other monkeys
-                             $('.userlist').append('<a href="/users/' + user_id +'" class="username">'+ user_name + '</a>');
+                             $('.userlist').append('<div class="monkeys"><img class="avatar" src="/assets/' + avatar_path + '" alt="Avatar" />' +
+                                   '<a href="/users/' + user_id +'" class="username">'+ user_name + '</a></div>');
                         })
 
                     }
@@ -331,6 +340,36 @@ function poll_server_for_new_messages() {
             }
         })
 };
-var holdTheInterval = setInterval(poll_server_for_new_messages, 5000);
+//var holdTheInterval = setInterval(poll_server_for_new_messages, 5000);
+// HTML5 Web socket
+function chat_stream() {
+    if ("WebSocket" in window) {
+        var id = $('.message').attr('id');
+        var last_update = $('.message #created_at:last-child').html();
+        var ws = new WebSocket("ws://127.0.0.1:3045/chatrooms/"+id);
+        ws.onopen = function() {
+            // Web Socket is connected. You can send data by send() method.
+            ws.send({id:id, last_update:last_update});
+        };
+        ws.onmessage = function (evt) { 
+          var received_msg = evt.data;
+          received_msg = "hi";
+        };
+        ws.onclose = function() {  };// websocket is closed.
+        } else {
+          // the browser doesn't support WebSocket.
+          //var holdTheInterval = setInterval(poll_server_for_new_messages, 5000);
+    }
+}
 
 /* -------------------------------------------- END - Chatrooms -------------------------------------------*/
+$(document).ready(function() {
+    accordian();
+    validate_forms();
+    scrollToBottom();
+    $('#comment_form input[type="text"], textarea#message_field').focus();
+    post_message();
+    post_on_enter();
+    chatRoomDisplay();
+ //   chat_stream();
+});

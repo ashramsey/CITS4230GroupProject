@@ -21,9 +21,11 @@ function chatRoomGen (){
 }
 
 function chatRoomDisplay(){
+	if document.title = "Monkey Talk | Home"{
 	var num = chatRoomGen();
 	newid = "chatRoomsList"+num;
 	document.getElementById(newid).style.display = "block";		
+}
 }
 /* -------------------------------------------- END - Index.html - Top Room List -------------------------*/
 

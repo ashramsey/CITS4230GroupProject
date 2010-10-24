@@ -11,6 +11,12 @@
     vertical-align: baseline;
     list-style:none
 }
+/********************************************************************************
+*                            HTML5 TAG				                           *
+*********************************************************************************/
+header, section, footer, nav, article, figure, figcaption, aside, hgroup, details, address{
+	display:block;
+}
 
 /********************************************************************************
 *                            TEMPLATE SPECIFIC STYLES                           *
@@ -25,8 +31,8 @@ body {
     background-color:#E6E2D9;
 }
 input, textarea, select { font-family: "Georgia", Tahoma, Sans-Serif; font-size:12px; }
-.field { padding: 4px 5px; border: solid 1px #e7e7e7; color: #969696; height: 15px; }
-.field-focused { color: #333; }
+.field { padding: 4px 5px; border: none; color: #969696; height: 15px; }
+.field-focused { color: #555; height:50px; display: inline-block;}
 input.button { padding: 4px 5px; cursor: pointer; }
 
 a { color: #45c7ee; text-decoration: underline; cursor: pointer; }
@@ -78,7 +84,7 @@ p { padding-bottom: 18px; }
 #header { padding:0 44px; }
 
 
-#slider { margin:0 20px; height: 327px; background: url(../images/slider.png) no-repeat 0 0; position: relative; -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 5px 0px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.25); }
+#slider { margin:0 20px; height: 327px; background: url(../images/slider.png) no-repeat 0 0; position: relative; -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 5px 0px; -webkit-border-radius: 10px;  -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.25); width:870px;}
 #slider .slider-nav { height:60px; overflow:hidden; }
 #slider .slider-nav a { display: block; width: 18px; height: 60px; font-size: 0; line-height: 0; text-indent: -4000px; position: absolute; top: 120px; }
 #slider .slider-nav a.prev { left: 0; background: url(../images/slideshow_left_tab.png) no-repeat 0 0; }
@@ -93,7 +99,7 @@ p { padding-bottom: 18px; }
 #slider-holder ul { width: 874px; height: 327px; position: relative; overflow: hidden; }
 #slider-holder ul li { list-style-type: none; float: left; display: inline; height: 267px; width: 712px; padding: 56px 108px 4px 54px; position: relative; overflow: hidden; }
 
-#main { display:inline-block; float: none; border-top: solid 1px #e3e7e9; margin:20px; padding:20px; }
+#main { display:inline-block; float: none; border-top: solid 1px #e3e7e9; margin:20px; padding:20px; width:930px;}
 
 h3.txt-monkey-again { background-image: url('../images/txt-monkey-again.gif'); }
 h3.txt-wedothis { background-image: url(../images/txt-wedothis.gif); }
@@ -117,10 +123,10 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 #footer { width:1000px; height: 31px; line-height:31px; background:none repeat scroll 0 0 #3D3E34; color: #DDD; padding:0px; }
 #footer { -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px; -moz-box-shadow:0px 5px 20px 0px rgba(0, 0, 0, 0.75); }
-#footer p { padding-bottom: 0; height: 31px }
+#footer p { padding: 0; height: 31px; width:auto;}
 #footer a { color: #DDD; text-decoration: none; }
 #footer a:hover { color: #FF5500; }
-#footer div { display:inline-block; padding:0; }
+#footer address { display:inline-block; padding:0; }
 #footer-right { width:240px; float:right; text-align:center; }
 #footer-center { width:520px; text-align:center; }
 #footer-left { width:240px; float:left; }
@@ -173,7 +179,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
         .list a:hover           { background-color:#55E1BB; } /* CCFFCC; } */
         /*---------------------------Two-Third Container End-------------------------------*/
         /*---------------------------------Two cols Start----------------------------------*/
-        .colFrame               { display:block !important; background: url("../images/members_bg1.png") repeat; padding:20px; min-height:250px; width:335px; margin:0 auto;}
+        .colFrame               { display:block !important;  background: url("../images/members_bg.png") repeat scroll 0 0 #00CC66; padding:20px; min-height:250px; width:335px; margin:0 auto; }
         .colFrame               { -moz-border-radius: 10px 10px 10px 10px; -moz-box-shadow:0 5px 20px rgba(0, 0, 0, 0.75); -webkit-border-radius: 10px 10px 10px 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 20px;}
         .colFrame h2.headText   { border-bottom:1px #999999 solid; padding-bottom:5px; font-weight:bold; color:#666666; }
         .colFrame ul            { list-style:none outside none; margin:10px -10px 10px 0; padding:0; }
@@ -208,7 +214,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
     
 /***************************** SUPPORT PAGE START ************************************/
         /*---------------------------Header Container Start ----------------------------*/
-        #support #feature                           { height:200px; padding:50px 56px; }
+        #support #feature                           { height:200px; padding:50px 56px; width:900px;}
         #support .support-image                     { float: left; display: inline; }
         #support .support-text                      { float:left; width:383px; margin:25px 0 0 80px; }
         h2.txt-need-help                            { height: 94px; background-image: url(../images/txt-looking-for-support.png); }
@@ -241,7 +247,9 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 /***************************** SITEMAP PAGE START ************************************/
 /***************************** SITEMAP PAGE END ************************************/
-
+/***************************** TOUR PAGE START ************************************/
+        #under_construction { margin-left: 200px;}
+/***************************** TOUR PAGE END ************************************/
 
 /***************************** ABOUTUS PAGE START ************************************/
         #abtus{
@@ -265,7 +273,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 
 /***************************** SIGNUP PAGE START ************************************/
         #otherres   { display: none }
-        .main-col   { width: 350px; float:right; margin-left: 150px }
+        .main-col   { width: 350px; float:left; margin-left: 150px }
         .top        { float: left }
         .userin     { margin-top: 20px }
 
@@ -333,6 +341,13 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 			overflow:auto; 
 			margin-left:30px;		
 			}
+                .avatar {
+                        width:50px;
+                        height:50px;
+                }
+                .monkeys {
+                        display:block;
+                }
 
 
 /***************************** CHATROOM PAGE END ************************************/
@@ -341,13 +356,13 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 		.lobbybox {
 			margin-left:120px; 
 			width:700px; 
-			height:500px
+			height:500px;
 		}
 		
 		.roommenu{
 			float:left; 
 			width:430px; 
-			height:450px
+			height:450px;
 		}
 		
 		.roomdiv {
@@ -355,7 +370,7 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 			height:410px; 
 			overflow:auto; 
 			background:white; 
-			margin:10px
+			margin:10px;
 		}
 
                 .user {
@@ -371,19 +386,54 @@ h3.txt-247 { background-image: url(../images/txt-247.gif); }
 		.newmenu {
 			float:right; 
 			width:180px; 
-			height:450px	
+			height:450px;
 		}
 
 		.loblabel{
-			color:#464646
+			color:#464646;
 		}
 		
 		.lobbydesc{
 			height:13em; 
-			width:14em
+			width:14em;
 		}
 
 /***************************** LOBBY PAGE END ************************************/
 
+/*****************************  NEW SIGNUP PAGE START ************************************/
+
+		.errwrap {
+			margin-left:120px; 
+			border-style:solid; 
+			border-width:1px; 
+			border-color:#909090; 
+			width:750px;
+			padding:10px;
+		}
+		
+		.errbox {
+			background-color:#FF99CC; 
+			color:red; 
+			width:550px; 
+			margin-left:100px; 
+			border-style:solid; 
+			border-width:2px;
+      text-align: center;
+		}
+		
+		.errform {
+			margin-left:270px; 
+			margin-top:50px;
+		}
+    #errform_p {
+      width:150px;
+      padding:4px 5px;
+    }
+    .actions {
+      width:200px;
+      padding:4px 5px;
+    }
+
+/***************************** NEW SIGNUP PAGE END ************************************/
 
 

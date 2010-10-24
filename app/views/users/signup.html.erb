@@ -1,6 +1,6 @@
 <div id="main">
 <!-- START SUPFORM -->
-<% form_for(@user) do |f| %>
+<% form_for @user, :html => { :multipart => true } do |f| %>
     <!-- Three Column Content -->
     <div class="top">
         <h2>Make me a Monkey!!!</h2><br />
@@ -26,6 +26,10 @@
         <div class="userin">
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, :id => 'password_confirm', :size => '25' %>
+        </div>
+        <div class="userin">
+            <%= f.label :avatar, "Photo" %>
+            <%= f.file_field :avatar %>
         </div>
         <div class="userin">
             <label for="memb">Citizenship:</label><br />
@@ -278,19 +282,11 @@
             <label for="res">Please Specify:</label>
             <input type="text" name="res" id="res" />
         </p>
-    </div>
-    <div class="cl">&nbsp;</div>
-    <!-- END Three Column Content -->
-
-    <!-- Two Column Content -->
-    <div class="main-col">
+    
         <h2>Tell us about yourself!</h2>
         <textarea name="about" rows="10" cols="60">Hobbies? Favourite food? Telling others a little about yourself may help you find friends and give you more to talk about!
         </textarea> <br /> <br />
-    </div>
-    <div class="cl">&nbsp;</div>
-    <!-- END Two Column Content -->
-    <div class="main-col">
+    
         <h2>Verification</h2>
         <img src="images/verify.png" alt="verification image" />
         <p>Please enter the above characters:
